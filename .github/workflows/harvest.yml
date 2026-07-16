@@ -1,0 +1,36 @@
+name: RenUSA team hours dashboard
+
+on:
+  schedule:
+    # Fridays at 18:00 UTC (about 1-2pm ET). Adjust the time or day as you like.
+    - cron: "0 18 * * 5"
+  workflow_dispatch: {}   # lets you run it manually from the Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build dashboard from Harvest
+        env:
+          HARVEST_ACCOUNT_ID: ${{ secrets.HARVEST_ACCOUNT_ID }}
+          HARVEST_TOKEN: ${{ secrets.HARVEST_TOKEN }}
+        run: python harvest_dashboard.py
+
+      - name: Commit and publish
+        run: |
+          git config user.name "harvest-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/
+          git commit -m "Update RenUSA team hours dashboard $(date -u +%F)" || echo "No changes to commit"
+          git push
