@@ -44,8 +44,10 @@ EXCLUDE_EMAILS = []
 YEAR = 2026
 # -----------------------------------------------------
 
-ACCOUNT_ID = os.environ.get("HARVEST_ACCOUNT_ID")
-TOKEN = os.environ.get("HARVEST_TOKEN")
+# .strip() guards against a trailing newline/space slipping in when the secret
+# was pasted — otherwise it becomes an invalid HTTP header value.
+ACCOUNT_ID = (os.environ.get("HARVEST_ACCOUNT_ID") or "").strip()
+TOKEN = (os.environ.get("HARVEST_TOKEN") or "").strip()
 
 
 def die(msg):
