@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated": "2026-07-16 15:39 UTC",
+    "generated": "2026-07-17 19:04 UTC",
     "year": 2026,
     "from": "2026-01-01",
-    "to": "2026-07-16",
+    "to": "2026-07-17",
     "people": [
       "Amber Clayton",
       "Ashley Hartman",
@@ -104,23 +104,268 @@
       "Western Freedom",
       "ibV Energy"
     ],
-    "entry_count": 8155,
-    "total_hours": 15370.1
+    "entry_count": 8265,
+    "total_hours": 15577.8
   },
   "entries": [
     {
-      "date": "2026-07-16",
+      "date": "2026-07-17",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 5.0
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Dave D'Onofrio",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Dave D'Onofrio",
+      "project": "Berkeley",
+      "client": "Penzance",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Dave D'Onofrio",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Dave D'Onofrio",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 3.5
+    },
+    {
+      "date": "2026-07-17",
       "person": "Gillian Kelahan",
       "project": "Ren Internal",
       "client": "RenUSA",
-      "hours": 0.75
+      "hours": 1.67
     },
     {
-      "date": "2026-07-16",
+      "date": "2026-07-17",
+      "person": "Jeremy Jones",
+      "project": "Wild Rose",
+      "client": "Alliant Energy",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Jeremy Jones",
+      "project": "Whispering Willow Wind",
+      "client": "Alliant Energy",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Gillian Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 1.75
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Ben Kelahan",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Ben Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.58
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Gillian Kelahan",
+      "project": "BESS",
+      "client": "AES",
+      "hours": 0.25
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Gillian Kelahan",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 1.25
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Kate Peters",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Kate Peters",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-07-17",
       "person": "Amber Clayton",
       "project": "Ren Internal",
       "client": "RenUSA",
       "hours": 8.0
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Jeremy Jones",
+      "project": "Wild Rose",
+      "client": "Alliant Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-17",
+      "person": "Jeremy Jones",
+      "project": "Whispering Willow Wind",
+      "client": "Alliant Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Chad Thompson",
+      "project": "Berkeley",
+      "client": "Penzance",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Chad Thompson",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 6.75
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Ashley Hartman",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Dave D'Onofrio",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Dave D'Onofrio",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Dave D'Onofrio",
+      "project": "Berkeley",
+      "client": "Penzance",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Dave D'Onofrio",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 3.0
     },
     {
       "date": "2026-07-16",
@@ -139,9 +384,366 @@
     {
       "date": "2026-07-16",
       "person": "Jeremy Jones",
+      "project": "Wild Rose",
+      "client": "Alliant Energy",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Jeremy Jones",
+      "project": "Wild Rose",
+      "client": "Alliant Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Jeremy Jones",
+      "project": "Whispering Willow Wind",
+      "client": "Alliant Energy",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Jeremy Jones",
+      "project": "Whispering Willow Wind",
+      "client": "Alliant Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Kate Peters",
       "project": "1500 Gateway Data Center",
       "client": "Penzance",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Kate Peters",
+      "project": "Home Range Digital",
+      "client": "Triple Oak",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Kate Peters",
+      "project": "Wild Rose",
+      "client": "Alliant Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Gillian Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Kate Peters",
+      "project": "Emery Expansion",
+      "client": "Alliant Energy",
+      "hours": 0.33
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 4.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Grace Lacke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
       "hours": 2.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Ben Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Grace Lacke",
+      "project": "Home Range Digital",
+      "client": "Triple Oak",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Ben Kelahan",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 3.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Kaylee Gibbs",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Grace Lacke",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Grace Lacke",
+      "project": "Home Range Digital",
+      "client": "Triple Oak",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Kaylee Gibbs",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 9.5
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-07-16",
+      "person": "Jeremy Jones",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Dave D'Onofrio",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Dave D'Onofrio",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Dave D'Onofrio",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Jeremy Jones",
+      "project": "Wild Rose",
+      "client": "Alliant Energy",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Jeremy Jones",
+      "project": "Whispering Willow Wind",
+      "client": "Alliant Energy",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Jeremy Jones",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Jeremy Jones",
+      "project": "Wild Rose",
+      "client": "Alliant Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Jeremy Jones",
+      "project": "Whispering Willow Wind",
+      "client": "Alliant Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Kate Peters",
+      "project": "Home Range Digital",
+      "client": "Triple Oak",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Kate Peters",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Kate Peters",
+      "project": "Home Range Digital",
+      "client": "Triple Oak",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 6.0
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Grace Lacke",
+      "project": "Wild Rose",
+      "client": "Alliant Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Kaylee Gibbs",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.33
+    },
+    {
+      "date": "2026-07-15",
+      "person": "Kaylee Gibbs",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 8.17
     },
     {
       "date": "2026-07-15",
@@ -246,7 +848,7 @@
       "person": "Ben Kelahan",
       "project": "Ren Business Development",
       "client": "RenUSA",
-      "hours": 1.5
+      "hours": 3.0
     },
     {
       "date": "2026-07-15",
@@ -260,7 +862,7 @@
       "person": "Ben Kelahan",
       "project": "1500 Gateway Data Center",
       "client": "Penzance",
-      "hours": 2.0
+      "hours": 3.5
     },
     {
       "date": "2026-07-15",
@@ -298,32 +900,95 @@
       "hours": 1.0
     },
     {
-      "date": "2026-07-15",
-      "person": "Jeremy Jones",
-      "project": "Whispering Willow Wind",
-      "client": "Alliant Energy",
+      "date": "2026-07-14",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-14",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-07-14",
+      "person": "Dave D'Onofrio",
+      "project": "Berkeley",
+      "client": "Penzance",
       "hours": 3.0
     },
     {
-      "date": "2026-07-15",
+      "date": "2026-07-14",
+      "person": "Dave D'Onofrio",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-07-14",
       "person": "Jeremy Jones",
       "project": "Wild Rose",
       "client": "Alliant Energy",
+      "hours": 6.0
+    },
+    {
+      "date": "2026-07-14",
+      "person": "Jeremy Jones",
+      "project": "Whispering Willow Wind",
+      "client": "Alliant Energy",
+      "hours": 6.0
+    },
+    {
+      "date": "2026-07-14",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
       "hours": 3.0
     },
     {
-      "date": "2026-07-15",
-      "person": "Jeremy Jones",
-      "project": "1500 Gateway Data Center",
-      "client": "Penzance",
+      "date": "2026-07-14",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-07-14",
+      "person": "Kate Peters",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
       "hours": 1.0
     },
     {
-      "date": "2026-07-15",
-      "person": "Jeremy Jones",
-      "project": "1500 Gateway Data Center",
-      "client": "Penzance",
+      "date": "2026-07-14",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
       "hours": 1.0
+    },
+    {
+      "date": "2026-07-14",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-14",
+      "person": "Kaylee Gibbs",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 10.0
+    },
+    {
+      "date": "2026-07-14",
+      "person": "Kaylee Gibbs",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.33
     },
     {
       "date": "2026-07-14",
@@ -446,13 +1111,6 @@
     },
     {
       "date": "2026-07-14",
-      "person": "Kaylee Gibbs",
-      "project": "Gipper Solar",
-      "client": "Scout Clean Energy",
-      "hours": 1.0
-    },
-    {
-      "date": "2026-07-14",
       "person": "Gillian Kelahan",
       "project": "BESS",
       "client": "AES",
@@ -491,7 +1149,7 @@
       "person": "Grace Lacke",
       "project": "Gipper Solar",
       "client": "Scout Clean Energy",
-      "hours": 8.0
+      "hours": 6.0
     },
     {
       "date": "2026-07-14",
@@ -508,32 +1166,151 @@
       "hours": 4.0
     },
     {
-      "date": "2026-07-14",
-      "person": "Jeremy Jones",
-      "project": "Wild Rose",
-      "client": "Alliant Energy",
-      "hours": 0.5
+      "date": "2026-07-13",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
     },
     {
-      "date": "2026-07-14",
+      "date": "2026-07-13",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Dave D'Onofrio",
+      "project": "Berkeley",
+      "client": "Penzance",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Dave D'Onofrio",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Dave D'Onofrio",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Dave D'Onofrio",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Jeremy Jones",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-07-13",
       "person": "Jeremy Jones",
       "project": "Whispering Willow Wind",
       "client": "Alliant Energy",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Kate Peters",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
       "hours": 0.5
     },
     {
-      "date": "2026-07-14",
-      "person": "Jeremy Jones",
-      "project": "Wild Rose",
-      "client": "Alliant Energy",
-      "hours": 3.5
+      "date": "2026-07-13",
+      "person": "Kate Peters",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 1.0
     },
     {
-      "date": "2026-07-14",
-      "person": "Jeremy Jones",
-      "project": "Whispering Willow Wind",
-      "client": "Alliant Energy",
-      "hours": 3.5
+      "date": "2026-07-13",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Kaylee Gibbs",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Kaylee Gibbs",
+      "project": "Green Sun Wind",
+      "client": "Steelhead",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Kaylee Gibbs",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Kaylee Gibbs",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Kaylee Gibbs",
+      "project": "Cloudwalker Wind",
+      "client": "Enel",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-07-13",
+      "person": "Kaylee Gibbs",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.25
     },
     {
       "date": "2026-07-13",
@@ -806,14 +1583,7 @@
       "person": "Jeremy Jones",
       "project": "Wild Rose",
       "client": "Alliant Energy",
-      "hours": 4.0
-    },
-    {
-      "date": "2026-07-13",
-      "person": "Jeremy Jones",
-      "project": "Whispering Willow Wind",
-      "client": "Alliant Energy",
-      "hours": 4.0
+      "hours": 3.0
     },
     {
       "date": "2026-07-12",
