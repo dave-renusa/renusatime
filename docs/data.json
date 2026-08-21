@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated": "2026-08-14 18:50 UTC",
+    "generated": "2026-08-21 18:33 UTC",
     "year": 2026,
     "from": "2026-01-01",
-    "to": "2026-08-14",
+    "to": "2026-08-21",
     "people": [
       "Amber Clayton",
       "Ashley Hartman",
@@ -51,6 +51,7 @@
       "Green Sun Wind",
       "Harvest Hills",
       "Home Range Digital",
+      "Humboldt",
       "Humboldt Wind",
       "Indiana",
       "Long Meadow Solar/Morgan County, CO",
@@ -113,10 +114,1564 @@
       "Western Freedom",
       "ibV Energy"
     ],
-    "entry_count": 9496,
-    "total_hours": 17959.8
+    "entry_count": 9805,
+    "total_hours": 18508.7
   },
   "entries": [
+    {
+      "date": "2026-08-21",
+      "person": "Dave D'Onofrio",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Dave D'Onofrio",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Dave D'Onofrio",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Dave D'Onofrio",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Grace Lacke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Grace Lacke",
+      "project": "Green Sun Wind",
+      "client": "Steelhead",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Grace Lacke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Kate Peters",
+      "project": "General",
+      "client": "RWE",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Jeremy Jones",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-08-21",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Dave D'Onofrio",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Dave D'Onofrio",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Dave D'Onofrio",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Dave D'Onofrio",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Dave D'Onofrio",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Kate Peters",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Kate Peters",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Chad Thompson",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 7.75
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 6.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Amber Clayton",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Jeremy Jones",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Grace Lacke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Grace Lacke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-20",
+      "person": "John Wright",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "John Wright",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "John Wright",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-20",
+      "person": "John Wright",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-08-20",
+      "person": "John Wright",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-20",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Dave D'Onofrio",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Dave D'Onofrio",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Dave D'Onofrio",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Kate Peters",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Kate Peters",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Kate Peters",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Chad Thompson",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Chad Thompson",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 0.25
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Chad Thompson",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 10.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Jeremy Jones",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Jeremy Jones",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Jeremy Jones",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Jeremy Jones",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Grace Lacke",
+      "project": "Humboldt",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Grace Lacke",
+      "project": "Green Sun Wind",
+      "client": "Steelhead",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Grace Lacke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.25
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Grace Lacke",
+      "project": "Home Range Digital",
+      "client": "Triple Oak",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Ashley Hartman",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.33
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Ashley Hartman",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.67
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Amber Clayton",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 5.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Gillian Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 0.25
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Ashley Hartman",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Gillian Kelahan",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Gillian Kelahan",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Gillian Kelahan",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Gillian Kelahan",
+      "project": "BESS",
+      "client": "AES",
+      "hours": 1.75
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-19",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.25
+    },
+    {
+      "date": "2026-08-19",
+      "person": "John Wright",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "John Wright",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "John Wright",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-19",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Dave D'Onofrio",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Dave D'Onofrio",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Dave D'Onofrio",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Dave D'Onofrio",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Kate Peters",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Kate Peters",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Chad Thompson",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 0.25
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Chad Thompson",
+      "project": "Berkeley",
+      "client": "Penzance",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Chad Thompson",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 7.5
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Chad Thompson",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 2.75
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Jeremy Jones",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 9.5
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Jeremy Jones",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Gillian Kelahan",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Amber Clayton",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 5.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Grace Lacke",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Gillian Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "John Wright",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "John Wright",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "John Wright",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Gillian Kelahan",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Gillian Kelahan",
+      "project": "BESS",
+      "client": "AES",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Grace Lacke",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 3.5
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Grace Lacke",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Grace Lacke",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 1.25
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Grace Lacke",
+      "project": "Humboldt",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.75
+    },
+    {
+      "date": "2026-08-18",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Dave D'Onofrio",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Dave D'Onofrio",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Dave D'Onofrio",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Dave D'Onofrio",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Dave D'Onofrio",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Dave D'Onofrio",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Dave D'Onofrio",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Kate Peters",
+      "project": "Cloudwalker Wind",
+      "client": "Enel",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Kate Peters",
+      "project": "BESS",
+      "client": "AES",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Kate Peters",
+      "project": "Home Range Digital",
+      "client": "Triple Oak",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Kate Peters",
+      "project": "Montcalm Ground Breaking",
+      "client": "Ranger Power",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Kate Peters",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Jeremy Jones",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Jeremy Jones",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Jeremy Jones",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "John Wright",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "John Wright",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "John Wright",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "John Wright",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Grace Lacke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Grace Lacke",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Grace Lacke",
+      "project": "Home Range Digital",
+      "client": "Triple Oak",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Grace Lacke",
+      "project": "Home Range Digital",
+      "client": "Triple Oak",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Grace Lacke",
+      "project": "Montcalm Ground Breaking",
+      "client": "Ranger Power",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Amber Clayton",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 6.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Chad Thompson",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 6.75
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Chad Thompson",
+      "project": "Berkeley",
+      "client": "Penzance",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Chad Thompson",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Ashley Hartman",
+      "project": "Cloudwalker Wind",
+      "client": "Enel",
+      "hours": 0.58
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.78
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.58
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Ashley Hartman",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Ashley Hartman",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Ashley Hartman",
+      "project": "Cloudwalker Wind",
+      "client": "Enel",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.25
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Gillian Kelahan",
+      "project": "BESS",
+      "client": "AES",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Gillian Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-17",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-16",
+      "person": "Chad Thompson",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 0.25
+    },
+    {
+      "date": "2026-08-16",
+      "person": "Ben Kelahan",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-15",
+      "person": "Chad Thompson",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 1.25
+    },
+    {
+      "date": "2026-08-15",
+      "person": "Ben Kelahan",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Ben Kelahan",
+      "project": "AA",
+      "client": "AA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Ben Kelahan",
+      "project": "FTP General",
+      "client": "Farm to Power",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Ben Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Ben Kelahan",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Tom Schwarz",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Tom Schwarz",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Tom Schwarz",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Tom Schwarz",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Tom Schwarz",
+      "project": "Nye County, NV",
+      "client": "Clearway",
+      "hours": 3.5
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Marilyn Ihinger",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Marilyn Ihinger",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Marilyn Ihinger",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Joshua Hartke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 6.0
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Joshua Hartke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Chad Thompson",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 0.25
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Chad Thompson",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 0.25
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Chad Thompson",
+      "project": "Berkeley",
+      "client": "Penzance",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-14",
+      "person": "Chad Thompson",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 6.5
+    },
     {
       "date": "2026-08-14",
       "person": "Jeremy Jones",
@@ -192,14 +1747,14 @@
       "person": "Gillian Kelahan",
       "project": "Ren Internal",
       "client": "RenUSA",
-      "hours": 1.25
+      "hours": 2.0
     },
     {
       "date": "2026-08-14",
       "person": "Gillian Kelahan",
       "project": "BESS",
       "client": "AES",
-      "hours": 1.25
+      "hours": 2.5
     },
     {
       "date": "2026-08-14",
@@ -305,6 +1860,167 @@
       "project": "Ren Internal",
       "client": "RenUSA",
       "hours": 8.0
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Ben Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Ben Kelahan",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Ben Kelahan",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Ben Kelahan",
+      "project": "Nye County, NV",
+      "client": "Clearway",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Ben Kelahan",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Tom Schwarz",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Tom Schwarz",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Tom Schwarz",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Tom Schwarz",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Tom Schwarz",
+      "project": "Nye County, NV",
+      "client": "Clearway",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Marilyn Ihinger",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Marilyn Ihinger",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Marilyn Ihinger",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Marilyn Ihinger",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.25
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Marilyn Ihinger",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Joshua Hartke",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Joshua Hartke",
+      "project": "Green Sun Wind",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Joshua Hartke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Chad Thompson",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 0.25
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Chad Thompson",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 6.75
+    },
+    {
+      "date": "2026-08-13",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 1.25
     },
     {
       "date": "2026-08-13",
@@ -602,6 +2318,160 @@
     },
     {
       "date": "2026-08-12",
+      "person": "Marilyn Ihinger",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Ben Kelahan",
+      "project": "FTP General",
+      "client": "Farm to Power",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Ben Kelahan",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Tom Schwarz",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Tom Schwarz",
+      "project": "Nye County, NV",
+      "client": "Clearway",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Tom Schwarz",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Tom Schwarz",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Tom Schwarz",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Marilyn Ihinger",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Marilyn Ihinger",
+      "project": "Montcalm Ground Breaking",
+      "client": "Ranger Power",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Marilyn Ihinger",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Marilyn Ihinger",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Joshua Hartke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Joshua Hartke",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Chad Thompson",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 7.25
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Joshua Hartke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Chad Thompson",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-12",
+      "person": "Chad Thompson",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-12",
       "person": "Jeremy Jones",
       "project": "Yellow Knight",
       "client": "Longroad Energy",
@@ -865,6 +2735,153 @@
       "project": "Ren Internal",
       "client": "RenUSA",
       "hours": 8.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Ben Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Ben Kelahan",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Tom Schwarz",
+      "project": "Nye County, NV",
+      "client": "Clearway",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Tom Schwarz",
+      "project": "Whitman Co Solar Projects",
+      "client": "ibV Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Tom Schwarz",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Tom Schwarz",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Tom Schwarz",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Tom Schwarz",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Tom Schwarz",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Marilyn Ihinger",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Marilyn Ihinger",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Marilyn Ihinger",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Marilyn Ihinger",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Chad Thompson",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 0.25
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Joshua Hartke",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Joshua Hartke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Joshua Hartke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-08-11",
+      "person": "Chad Thompson",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 2.25
     },
     {
       "date": "2026-08-11",
@@ -1176,6 +3193,153 @@
     },
     {
       "date": "2026-08-10",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Ben Kelahan",
+      "project": "FTP General",
+      "client": "Farm to Power",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Ben Kelahan",
+      "project": "Nye County, NV",
+      "client": "Clearway",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Ben Kelahan",
+      "project": "AA",
+      "client": "AA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Ben Kelahan",
+      "project": "1500 Gateway Data Center",
+      "client": "Penzance",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Tom Schwarz",
+      "project": "Nye County, NV",
+      "client": "Clearway",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Tom Schwarz",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Tom Schwarz",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Tom Schwarz",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Tom Schwarz",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Marilyn Ihinger",
+      "project": "Montcalm Ground Breaking",
+      "client": "Ranger Power",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Joshua Hartke",
+      "project": "Green Sun Wind",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Joshua Hartke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Joshua Hartke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Joshua Hartke",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-08-10",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 1.25
+    },
+    {
+      "date": "2026-08-10",
       "person": "Jeremy Jones",
       "project": "1500 Gateway Data Center",
       "client": "Penzance",
@@ -1361,7 +3525,7 @@
       "person": "Chad Thompson",
       "project": "1500 Gateway Data Center",
       "client": "Penzance",
-      "hours": 7.25
+      "hours": 7.75
     },
     {
       "date": "2026-08-10",
