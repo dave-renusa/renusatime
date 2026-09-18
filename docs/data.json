@@ -1,9 +1,9 @@
 {
   "meta": {
-    "generated": "2026-09-11 20:26 UTC",
+    "generated": "2026-09-18 20:24 UTC",
     "year": 2026,
     "from": "2026-01-01",
-    "to": "2026-09-11",
+    "to": "2026-09-18",
     "people": [
       "Amber Clayton",
       "Ashley Hartman",
@@ -119,10 +119,2271 @@
       "Western Freedom",
       "ibV Energy"
     ],
-    "entry_count": 10783,
-    "total_hours": 20510.2
+    "entry_count": 11145,
+    "total_hours": 21171.1
   },
   "entries": [
+    {
+      "date": "2026-09-18",
+      "person": "Tom Schwarz",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Tom Schwarz",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Tom Schwarz",
+      "project": "Whitman Co Solar Projects",
+      "client": "ibV Energy",
+      "hours": 0.33
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Tom Schwarz",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.33
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Tom Schwarz",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Tom Schwarz",
+      "project": "Nye County, NV",
+      "client": "Clearway",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Tom Schwarz",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Jeremy Jones",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Chad Thompson",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "John Wright",
+      "project": "Highline Research",
+      "client": "Orsted",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "John Wright",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "John Wright",
+      "project": "Whitman Co Solar Projects",
+      "client": "ibV Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "John Wright",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 5.0
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Ben Kelahan",
+      "project": "FTP General",
+      "client": "Farm to Power",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Ben Kelahan",
+      "project": "AA",
+      "client": "AA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Ben Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Kate Peters",
+      "project": "Hawkeye Groundbreaking",
+      "client": "Ranger Power",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Kate Peters",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Amber Clayton",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Grace Lacke",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Grace Lacke",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Grace Lacke",
+      "project": "Hawkeye Groundbreaking",
+      "client": "Ranger Power",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-18",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Tom Schwarz",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Tom Schwarz",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.75
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Tom Schwarz",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Tom Schwarz",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Tom Schwarz",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Tom Schwarz",
+      "project": "Whitman Co Solar Projects",
+      "client": "ibV Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Jeremy Jones",
+      "project": "Humboldt",
+      "client": "RWE",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Jeremy Jones",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 5.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Chad Thompson",
+      "project": "Berkeley",
+      "client": "Penzance",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Chad Thompson",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Chad Thompson",
+      "project": "Rouget Road",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Chad Thompson",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 4.75
+    },
+    {
+      "date": "2026-09-17",
+      "person": "John Wright",
+      "project": "Whitman Co Solar Projects",
+      "client": "ibV Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "John Wright",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "John Wright",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "John Wright",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "John Wright",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Kate Peters",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Kate Peters",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Kate Peters",
+      "project": "Home Range Digital",
+      "client": "Triple Oak",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Kate Peters",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.33
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ashley Hartman",
+      "project": "Cloudwalker Wind",
+      "client": "Enel",
+      "hours": 0.67
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 1.75
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ben Kelahan",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ben Kelahan",
+      "project": "FTP General",
+      "client": "Farm to Power",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ben Kelahan",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ben Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ben Kelahan",
+      "project": "AA",
+      "client": "AA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 5.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Amber Clayton",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ashley Hartman",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Ashley Hartman",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.45
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Gillian Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 0.25
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Gillian Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Gillian Kelahan",
+      "project": "BESS",
+      "client": "AES",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Gillian Kelahan",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 0.25
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 5.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Grace Lacke",
+      "project": "Pottawattamie",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Grace Lacke",
+      "project": "Humboldt",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Grace Lacke",
+      "project": "Home Range Digital",
+      "client": "Triple Oak",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Grace Lacke",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-17",
+      "person": "Grace Lacke",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Tom Schwarz",
+      "project": "Highline Research",
+      "client": "Orsted",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Tom Schwarz",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Tom Schwarz",
+      "project": "Whitman Co Solar Projects",
+      "client": "ibV Energy",
+      "hours": 0.33
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Tom Schwarz",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Tom Schwarz",
+      "project": "BESS",
+      "client": "AES",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Tom Schwarz",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Tom Schwarz",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Jeremy Jones",
+      "project": "Humboldt",
+      "client": "RWE",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Jeremy Jones",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Jeremy Jones",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Chad Thompson",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Chad Thompson",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Chad Thompson",
+      "project": "Berkeley",
+      "client": "Penzance",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Chad Thompson",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 2.75
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 5.25
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 3.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "John Wright",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "John Wright",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "John Wright",
+      "project": "Whitman Co Solar Projects",
+      "client": "ibV Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "John Wright",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kate Peters",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kate Peters",
+      "project": "General",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kate Peters",
+      "project": "BESS",
+      "client": "AES",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ashley Hartman",
+      "project": "Cloudwalker Wind",
+      "client": "Enel",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ben Kelahan",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ben Kelahan",
+      "project": "General",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 3.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ben Kelahan",
+      "project": "FTP General",
+      "client": "Farm to Power",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kaylee Gibbs",
+      "project": "Green Sun Wind",
+      "client": "Steelhead",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kaylee Gibbs",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Kaylee Gibbs",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 5.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 4.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Amber Clayton",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ashley Hartman",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 0.67
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.33
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Ashley Hartman",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Gillian Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Gillian Kelahan",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Gillian Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.25
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Gillian Kelahan",
+      "project": "BESS",
+      "client": "AES",
+      "hours": 1.75
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Gillian Kelahan",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Grace Lacke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Grace Lacke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 6.0
+    },
+    {
+      "date": "2026-09-16",
+      "person": "Grace Lacke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 3.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Tom Schwarz",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Tom Schwarz",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Tom Schwarz",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Tom Schwarz",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Tom Schwarz",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.33
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Tom Schwarz",
+      "project": "Highline Research",
+      "client": "Orsted",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Jeremy Jones",
+      "project": "Humboldt",
+      "client": "RWE",
+      "hours": 3.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Jeremy Jones",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 3.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Jeremy Jones",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Chad Thompson",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 3.25
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "John Wright",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "John Wright",
+      "project": "Highline Research",
+      "client": "Orsted",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "John Wright",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 3.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Kate Peters",
+      "project": "Gipper Wind",
+      "client": "Scout Clean Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Kate Peters",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Kate Peters",
+      "project": "Highline Research",
+      "client": "Orsted",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Kate Peters",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Ashley Hartman",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Ashley Hartman",
+      "project": "Cloudwalker Wind",
+      "client": "Enel",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Ben Kelahan",
+      "project": "FTP General",
+      "client": "Farm to Power",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Ben Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Kaylee Gibbs",
+      "project": "Green Sun Wind",
+      "client": "Steelhead",
+      "hours": 9.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Kaylee Gibbs",
+      "project": "Green Sun Wind",
+      "client": "Steelhead",
+      "hours": 3.75
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.58
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Gillian Kelahan",
+      "project": "BESS",
+      "client": "AES",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Amber Clayton",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 6.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.3
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.25
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Grace Lacke",
+      "project": "Humboldt",
+      "client": "RWE",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Gillian Kelahan",
+      "project": "Highline Research",
+      "client": "Orsted",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Gillian Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.75
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.25
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Gillian Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 2.25
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Grace Lacke",
+      "project": "Humboldt",
+      "client": "RWE",
+      "hours": 6.0
+    },
+    {
+      "date": "2026-09-15",
+      "person": "Grace Lacke",
+      "project": "Humboldt",
+      "client": "RWE",
+      "hours": 5.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Tom Schwarz",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Tom Schwarz",
+      "project": "Highline Research",
+      "client": "Orsted",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Tom Schwarz",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Tom Schwarz",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Tom Schwarz",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Tom Schwarz",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Jeremy Jones",
+      "project": "Humboldt",
+      "client": "RWE",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Jeremy Jones",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Jeremy Jones",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "John Wright",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "John Wright",
+      "project": "Whitman Co Solar Projects",
+      "client": "ibV Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "John Wright",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "John Wright",
+      "project": "Berkeley",
+      "client": "Penzance",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "John Wright",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "John Wright",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Kate Peters",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Kate Peters",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Kate Peters",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Kate Peters",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Ben Kelahan",
+      "project": "FTP General",
+      "client": "Farm to Power",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Ben Kelahan",
+      "project": "FTP General",
+      "client": "Farm to Power",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Ben Kelahan",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 7.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Amber Clayton",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 6.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Amber Clayton",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 3.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Chad Thompson",
+      "project": "Berkeley",
+      "client": "Penzance",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Chad Thompson",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Kaylee Gibbs",
+      "project": "Green Sun Wind",
+      "client": "Steelhead",
+      "hours": 11.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Kaylee Gibbs",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Kaylee Gibbs",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Ashley Hartman",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Ashley Hartman",
+      "project": "Cloudwalker Wind",
+      "client": "Enel",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.67
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.67
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Marilyn Ihinger",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Marilyn Ihinger",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Marilyn Ihinger",
+      "project": "Hawkeye Groundbreaking",
+      "client": "Ranger Power",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.25
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Grace Lacke",
+      "project": "Humboldt",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Ashley Hartman",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Ashley Hartman",
+      "project": "Cloudwalker Wind",
+      "client": "Enel",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Gillian Kelahan",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Gillian Kelahan",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Gillian Kelahan",
+      "project": "Western Freedom",
+      "client": "Western Freedom",
+      "hours": 1.33
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Grace Lacke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Grace Lacke",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Grace Lacke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-14",
+      "person": "Gillian Kelahan",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.75
+    },
+    {
+      "date": "2026-09-13",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-13",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-13",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.42
+    },
+    {
+      "date": "2026-09-13",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 6.5
+    },
+    {
+      "date": "2026-09-12",
+      "person": "Marilyn Ihinger",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 4.5
+    },
+    {
+      "date": "2026-09-12",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-12",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 10.5
+    },
+    {
+      "date": "2026-09-12",
+      "person": "Dave D'Onofrio",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 7.0
+    },
+    {
+      "date": "2026-09-12",
+      "person": "Grace Lacke",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 6.0
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Marilyn Ihinger",
+      "project": "Montcalm Ground Breaking",
+      "client": "Ranger Power",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Marilyn Ihinger",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Ashley Hartman",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 8.5
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 7.5
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Ashley Hartman",
+      "project": "Cloudwalker Wind",
+      "client": "Enel",
+      "hours": 1.33
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Joshua Hartke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Joshua Hartke",
+      "project": "Pottawattamie",
+      "client": "RWE",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Joshua Hartke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Kaylee Gibbs",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Kaylee Gibbs",
+      "project": "Cloudwalker Wind",
+      "client": "Enel",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Kaylee Gibbs",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Kaylee Gibbs",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Kaylee Gibbs",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Kaylee Gibbs",
+      "project": "Green Sun Wind",
+      "client": "Steelhead",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Chad Thompson",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Chad Thompson",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Chad Thompson",
+      "project": "Berkeley",
+      "client": "Penzance",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-11",
+      "person": "Chad Thompson",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 4.5
+    },
+    {
+      "date": "2026-09-11",
+      "person": "John Wright",
+      "project": "Cattle Trail Solar",
+      "client": "ibV Energy",
+      "hours": 2.0
+    },
     {
       "date": "2026-09-11",
       "person": "Jeremy Jones",
@@ -163,7 +2424,7 @@
       "person": "Gillian Kelahan",
       "project": "Silver Maple",
       "client": "RWE",
-      "hours": 0.5
+      "hours": 0.75
     },
     {
       "date": "2026-09-11",
@@ -345,14 +2606,14 @@
       "person": "Ben Kelahan",
       "project": "Ren Business Development",
       "client": "RenUSA",
-      "hours": 2.0
+      "hours": 3.0
     },
     {
       "date": "2026-09-11",
       "person": "Ben Kelahan",
       "project": "Western Freedom",
       "client": "Western Freedom",
-      "hours": 1.5
+      "hours": 2.0
     },
     {
       "date": "2026-09-11",
@@ -399,13 +2660,6 @@
     {
       "date": "2026-09-11",
       "person": "John Wright",
-      "project": "Long Meadow Solar/Morgan County, CO",
-      "client": "Treaty Oak Clean Energy",
-      "hours": 0.5
-    },
-    {
-      "date": "2026-09-11",
-      "person": "John Wright",
       "project": "Ren Internal",
       "client": "RenUSA",
       "hours": 1.0
@@ -416,6 +2670,111 @@
       "project": "Hawkeye Groundbreaking",
       "client": "Ranger Power",
       "hours": 1.0
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Marilyn Ihinger",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Marilyn Ihinger",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 8.5
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Ashley Hartman",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Ashley Hartman",
+      "project": "Cloudwalker Wind",
+      "client": "Enel",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Ashley Hartman",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Ashley Hartman",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Joshua Hartke",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Joshua Hartke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Joshua Hartke",
+      "project": "Pottawattamie",
+      "client": "RWE",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Kaylee Gibbs",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Kaylee Gibbs",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Kaylee Gibbs",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Kaylee Gibbs",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-10",
+      "person": "Kaylee Gibbs",
+      "project": "Green Sun Wind",
+      "client": "Steelhead",
+      "hours": 4.75
     },
     {
       "date": "2026-09-10",
@@ -730,21 +3089,161 @@
       "person": "John Wright",
       "project": "Long Meadow Solar/Morgan County, CO",
       "client": "Treaty Oak Clean Energy",
-      "hours": 2.0
+      "hours": 1.5
     },
     {
       "date": "2026-09-10",
       "person": "John Wright",
       "project": "Grandview Solar/Pueblo County, CO",
       "client": "Treaty Oak Clean Energy",
-      "hours": 2.0
+      "hours": 1.5
     },
     {
       "date": "2026-09-10",
       "person": "John Wright",
       "project": "Cattle Trail Solar",
       "client": "ibV Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 3.0
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Marilyn Ihinger",
+      "project": "Walker Road Solar",
+      "client": "RWE",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Marilyn Ihinger",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 5.0
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Ashley Hartman",
+      "project": "Cloudwalker Wind",
+      "client": "Enel",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Ashley Hartman",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.33
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 2.5
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Ashley Hartman",
+      "project": "Harvest Hills",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Ashley Hartman",
+      "project": "Ren Business Development",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Ashley Hartman",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Ashley Hartman",
+      "project": "Frigid Creek Solar/Mason County, WA",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 0.75
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Joshua Hartke",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Joshua Hartke",
+      "project": "Gipper Solar",
+      "client": "Scout Clean Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Joshua Hartke",
+      "project": "Pottawattamie",
+      "client": "RWE",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Joshua Hartke",
+      "project": "Humboldt",
+      "client": "RWE",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-09",
+      "person": "Kaylee Gibbs",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-09-09",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
       "hours": 1.5
+    },
+    {
+      "date": "2026-09-09",
+      "person": "John Wright",
+      "project": "Whitman Co Solar Projects",
+      "client": "ibV Energy",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-09",
+      "person": "John Wright",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 1.0
     },
     {
       "date": "2026-09-09",
@@ -1056,27 +3555,6 @@
     },
     {
       "date": "2026-09-09",
-      "person": "John Wright",
-      "project": "Ren Internal",
-      "client": "RenUSA",
-      "hours": 2.0
-    },
-    {
-      "date": "2026-09-09",
-      "person": "John Wright",
-      "project": "Cattle Trail Solar",
-      "client": "ibV Energy",
-      "hours": 1.5
-    },
-    {
-      "date": "2026-09-09",
-      "person": "John Wright",
-      "project": "Whitman Co Solar Projects",
-      "client": "ibV Energy",
-      "hours": 2.0
-    },
-    {
-      "date": "2026-09-09",
       "person": "Grace Lacke",
       "project": "Silver Maple",
       "client": "RWE",
@@ -1095,6 +3573,97 @@
       "project": "Walker Road Solar",
       "client": "RWE",
       "hours": 0.5
+    },
+    {
+      "date": "2026-09-08",
+      "person": "Marilyn Ihinger",
+      "project": "Yellow Knight",
+      "client": "Longroad Energy",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-08",
+      "person": "Marilyn Ihinger",
+      "project": "Silver Maple",
+      "client": "RWE",
+      "hours": 1.5
+    },
+    {
+      "date": "2026-09-08",
+      "person": "Marilyn Ihinger",
+      "project": "Ringgold Wind",
+      "client": "Steelhead",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-08",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-08",
+      "person": "Joshua Hartke",
+      "project": "Green Sun Wind",
+      "client": "Steelhead",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-08",
+      "person": "Joshua Hartke",
+      "project": "Humboldt",
+      "client": "RWE",
+      "hours": 4.0
+    },
+    {
+      "date": "2026-09-08",
+      "person": "Joshua Hartke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 2.0
+    },
+    {
+      "date": "2026-09-08",
+      "person": "Kaylee Gibbs",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-09-08",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 0.5
+    },
+    {
+      "date": "2026-09-08",
+      "person": "John Wright",
+      "project": "Long Meadow Solar/Morgan County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-08",
+      "person": "John Wright",
+      "project": "Grandview Solar/Pueblo County, CO",
+      "client": "Treaty Oak Clean Energy",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-08",
+      "person": "John Wright",
+      "project": "Highline Research",
+      "client": "Orsted",
+      "hours": 1.0
+    },
+    {
+      "date": "2026-09-08",
+      "person": "John Wright",
+      "project": "Belvedere Tech Campus - Fredericksburg",
+      "client": "Highland Digital",
+      "hours": 1.5
     },
     {
       "date": "2026-09-08",
@@ -1344,23 +3913,9 @@
     {
       "date": "2026-09-08",
       "person": "John Wright",
-      "project": "Cattle Trail Solar",
-      "client": "ibV Energy",
-      "hours": 2.0
-    },
-    {
-      "date": "2026-09-08",
-      "person": "John Wright",
-      "project": "Ren Internal",
-      "client": "RenUSA",
-      "hours": 1.5
-    },
-    {
-      "date": "2026-09-08",
-      "person": "John Wright",
       "project": "Whitman Co Solar Projects",
       "client": "ibV Energy",
-      "hours": 2.5
+      "hours": 1.0
     },
     {
       "date": "2026-09-08",
@@ -1451,7 +4006,7 @@
       "person": "Ben Kelahan",
       "project": "AA",
       "client": "AA",
-      "hours": 0.5
+      "hours": 1.5
     },
     {
       "date": "2026-09-08",
@@ -1459,6 +4014,34 @@
       "project": "Ren Internal",
       "client": "RenUSA",
       "hours": 1.0
+    },
+    {
+      "date": "2026-09-07",
+      "person": "Marilyn Ihinger",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-09-07",
+      "person": "Joshua Hartke",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-09-07",
+      "person": "Kaylee Gibbs",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
+    },
+    {
+      "date": "2026-09-07",
+      "person": "John Wright",
+      "project": "Ren Internal",
+      "client": "RenUSA",
+      "hours": 8.0
     },
     {
       "date": "2026-09-07",
@@ -1494,55 +4077,6 @@
       "project": "Ren Internal",
       "client": "RenUSA",
       "hours": 8.0
-    },
-    {
-      "date": "2026-09-07",
-      "person": "John Wright",
-      "project": "Highline Research",
-      "client": "Orsted",
-      "hours": 1.0
-    },
-    {
-      "date": "2026-09-07",
-      "person": "John Wright",
-      "project": "Long Meadow Solar/Morgan County, CO",
-      "client": "Treaty Oak Clean Energy",
-      "hours": 0.5
-    },
-    {
-      "date": "2026-09-07",
-      "person": "John Wright",
-      "project": "Grandview Solar/Pueblo County, CO",
-      "client": "Treaty Oak Clean Energy",
-      "hours": 1.5
-    },
-    {
-      "date": "2026-09-07",
-      "person": "John Wright",
-      "project": "Berkeley",
-      "client": "Penzance",
-      "hours": 0.5
-    },
-    {
-      "date": "2026-09-07",
-      "person": "John Wright",
-      "project": "Ren Internal",
-      "client": "RenUSA",
-      "hours": 1.0
-    },
-    {
-      "date": "2026-09-07",
-      "person": "John Wright",
-      "project": "Ren Internal",
-      "client": "RenUSA",
-      "hours": 0.5
-    },
-    {
-      "date": "2026-09-07",
-      "person": "John Wright",
-      "project": "Whitman Co Solar Projects",
-      "client": "ibV Energy",
-      "hours": 1.0
     },
     {
       "date": "2026-09-07",
