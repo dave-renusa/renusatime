@@ -51,6 +51,16 @@ Open `harvest_dashboard.py` and edit the config block near the top:
 Change the schedule by editing the `cron` line in
 `.github/workflows/harvest.yml`.
 
+## Budget vs. actual tab
+
+The first tab lists every active project that has a budget set in Harvest,
+sorted by % of budget used: red over 100%, gold at 80%+. The numbers come
+straight from Harvest's Project Budget report (`/v2/reports/project_budget`),
+so they match Reports → Project Budget in Harvest: all-time, everyone on the
+project, not limited by the dashboard's filters. Change the 80% line with
+`BUDGET_WARN_PCT` in the HTML. To get a project on the list, set its budget
+in Harvest (Projects → Edit → Budget).
+
 ## Notes and limits
 
 - The dashboard is **public** — anyone with the link can see named team hours.

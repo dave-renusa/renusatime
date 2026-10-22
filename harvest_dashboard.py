@@ -132,7 +132,38 @@ def fetch_entries(keep_ids, from_date, to_date):
     return out
 
 
-def build_payload(entries, from_date, to_date):
+def fetch_budgets():
+    # Harvest's own Project Budget report: budget, spent and remaining per
+    # project, all-time and across everyone who logged time (not just the
+    # team). Same numbers as Reports -> Project Budget in the Harvest UI.
+    # Non-fatal: if the token can't read it, the hours dashboard still builds.
+    try:
+        raw = get_all("/reports/project_budget", "results",
+                      {"is_active": "true"})
+    except SystemExit:
+        print("WARNING: could not read the project budget report; "
+              "Budget tab will be empty.", file=sys.stderr)
+        return []
+    out = []
+    for r in raw:
+        budget = r.get("budget")
+        if not budget or r.get("budget_by") == "none":
+            continue  # no budget set on this project
+        out.append({
+            "project": r.get("project_name", ""),
+            "client": r.get("client_name", ""),
+            # "project_cost" / "task_fees" budgets are dollars; the rest are hours
+            "unit": "$" if r.get("budget_by") in ("project_cost", "task_fees") else "h",
+            "monthly": bool(r.get("budget_is_monthly")),
+            "budget": float(budget),
+            "spent": float(r.get("budget_spent") or 0.0),
+            "remaining": float(r.get("budget_remaining") or 0.0),
+        })
+    print("Budgets: %d active projects with a budget set." % len(out))
+    return out
+
+
+def build_payload(entries, from_date, to_date, budgets=None):
     people = sorted({e["person"] for e in entries})
     projects = sorted({e["project"] for e in entries})
     clients = sorted({e["client"] for e in entries if e["client"]})
@@ -149,6 +180,7 @@ def build_payload(entries, from_date, to_date):
             "total_hours": round(sum(e["hours"] for e in entries), 1),
         },
         "entries": entries,
+        "budgets": budgets or [],
     }
 
 
@@ -227,6 +259,17 @@ HTML_TEMPLATE = r"""<!doctype html>
   .flag-card .why { font-size: 12px; color: var(--muted); margin-top: 4px; }
   .flag-empty { background: #fff; padding: 14px 18px; border-left: 4px solid #1f7a44; font-size: 13px; color: var(--muted); }
   .flag-empty strong { color: #1f7a44; }
+  .budget-summary { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 18px; }
+  .budget-summary .stat.red { border-top-color: var(--red); }
+  .budget-summary .stat.red .num { color: var(--red); }
+  .budget-summary .stat.gold { border-top-color: var(--gold); }
+  .budget-summary .stat.gold .num { color: var(--gold); }
+  .budget-note { font-size: 12px; color: var(--muted); margin-bottom: 10px; }
+  .bbar { position: relative; height: 10px; background: var(--cream); min-width: 120px; }
+  .bbar span { position: absolute; left: 0; top: 0; bottom: 0; background: #1f7a44; }
+  .bbar.gold span { background: var(--gold); }
+  .bbar.red span { background: var(--red); }
+  td.over { color: var(--red); font-weight: 700; }
   footer .americana { height: 8px; background: repeating-linear-gradient(90deg, var(--red) 0 40px, #fff 40px 80px, var(--navy) 80px 120px); }
   footer .bar { background: var(--navy); color: #cdd6e3; font-size: 12px; padding: 12px 32px; }
 </style>
@@ -274,13 +317,24 @@ HTML_TEMPLATE = r"""<!doctype html>
   <section class="flags-section" id="flagsSection"></section>
 
   <nav class="tabs">
-    <button data-tab="week" class="active">By week</button>
+    <button data-tab="budget" class="active">Budget vs. actual</button>
+    <button data-tab="week">By week</button>
     <button data-tab="month">By month</button>
     <button data-tab="project">By project</button>
     <button data-tab="person">By person</button>
+    <button data-tab="projcards">Project cards</button>
   </nav>
 
-  <section class="view active" id="view-week">
+  <section class="view active" id="view-budget">
+    <div class="budget-summary" id="budgetSummary"></div>
+    <div class="chart-card">
+      <h2>Projects by % of budget used</h2>
+      <div class="budget-note">Straight from Harvest's Project Budget report: all-time totals for everyone on the project. The people, project and date filters above don't apply to this tab. Monthly budgets show the current month.</div>
+      <div id="budgetTableHost"></div>
+    </div>
+  </section>
+
+  <section class="view" id="view-week">
     <div class="chart-card">
       <h2>Hours per ISO week</h2>
       <div class="chart-wrap"><canvas id="weekChart"></canvas></div>
@@ -315,6 +369,11 @@ HTML_TEMPLATE = r"""<!doctype html>
 
   <section class="view" id="view-person">
     <div id="personHost"></div>
+  </section>
+
+  <section class="view" id="view-projcards">
+    <div class="budget-note">One card per project in the current filter. Projects with a Harvest budget come first, most over budget at the top. The budget bar is Harvest's all-time total; the hours and people table follow the filters above.</div>
+    <div id="projCardHost"></div>
   </section>
 
 </div>
@@ -517,6 +576,19 @@ function computeFlags(entries) {
     }
   }
 
+  // ---- 5. Project budgets (only projects that appear in the current filter) ----
+  const inFilter = new Set(entries.map(e => (e.client || '') + '|' + e.project));
+  for (const b of DATA.budgets || []) {
+    if (!b.budget || !inFilter.has(b.client + '|' + b.project)) continue;
+    const pct = (b.spent / b.budget) * 100;
+    if (pct < BUDGET_WARN_PCT) continue;
+    const amt = n => b.unit === '$' ? '$' + Math.round(n).toLocaleString() : n.toFixed(1) + 'h';
+    flags.push({ severity: pct > 100 ? 'red' : 'gold', who: b.project,
+      what: pct > 100 ? `Over budget: ${pct.toFixed(0)}% used` : `Nearing budget: ${pct.toFixed(0)}% used`,
+      why: `${amt(b.spent)} of ${amt(b.budget)}${b.monthly ? ' this month' : ''}` +
+           (b.remaining < 0 ? `, ${amt(-b.remaining)} over.` : `, ${amt(b.remaining)} left.`) });
+  }
+
   const sevOrder = { red: 0, gold: 1, info: 2 };
   flags.sort((a, b) => sevOrder[a.severity] - sevOrder[b.severity] || a.who.localeCompare(b.who));
   return flags;
@@ -691,6 +763,110 @@ function renderProject(entries) {
   $('#projectTableHost').innerHTML = sorted.length
     ? `<table><tr><th>Client</th><th>Project</th><th class="num">Hours</th><th class="num">% of total</th></tr>${rows}</table>`
     : `<div class="empty">No data in this filter.</div>`;
+}
+
+// Budget tab: Harvest's own budget numbers, independent of the filters.
+const BUDGET_WARN_PCT = 80;  // gold at or above this, red over 100
+
+function renderBudget() {
+  const rows = (DATA.budgets || []).map(b => ({ ...b, pct: b.budget ? (b.spent / b.budget) * 100 : 0 }));
+  rows.sort((a, b) => b.pct - a.pct);
+  const level = pct => pct > 100 ? 'red' : pct >= BUDGET_WARN_PCT ? 'gold' : '';
+  const amt = (n, unit) => unit === '$'
+    ? '$' + Math.round(n).toLocaleString()
+    : fmt(n) + 'h';
+
+  const over = rows.filter(r => r.pct > 100).length;
+  const near = rows.filter(r => level(r.pct) === 'gold').length;
+  $('#budgetSummary').innerHTML = `
+    <div class="stat red"><div class="label">Over budget</div><div class="num">${over}</div></div>
+    <div class="stat gold"><div class="label">${BUDGET_WARN_PCT}%+ used</div><div class="num">${near}</div></div>
+    <div class="stat"><div class="label">Under ${BUDGET_WARN_PCT}%</div><div class="num">${rows.length - over - near}</div></div>`;
+
+  const body = rows.map(r => {
+    const lv = level(r.pct);
+    return `<tr>
+      <td>${escapeHtml(r.client)}</td>
+      <td>${escapeHtml(r.project)}${r.monthly ? ' <span style="color:var(--muted);font-size:12px">(monthly)</span>' : ''}</td>
+      <td class="num">${amt(r.budget, r.unit)}</td>
+      <td class="num">${amt(r.spent, r.unit)}</td>
+      <td class="num${r.remaining < 0 ? ' over' : ''}">${amt(r.remaining, r.unit)}</td>
+      <td><div class="bbar ${lv}"><span style="width:${Math.min(r.pct, 100)}%"></span></div></td>
+      <td class="num${lv === 'red' ? ' over' : ''}">${r.pct.toFixed(0)}%</td>
+    </tr>`;
+  }).join('');
+  $('#budgetTableHost').innerHTML = rows.length
+    ? `<table><tr><th>Client</th><th>Project</th><th class="num">Budget</th><th class="num">Used</th><th class="num">Remaining</th><th></th><th class="num">% used</th></tr>${body}</table>`
+    : `<div class="empty">No project budgets found. Budgets are set per project in Harvest (Projects → Edit → Budget), and the token needs Administrator access to read them.</div>`;
+}
+
+// Project cards: the person-card idea turned around — who worked on each
+// project, with its Harvest budget bar when one is set.
+function renderProjectCards(entries) {
+  const budgetOf = new Map((DATA.budgets || []).map(b => [b.client + '|' + b.project, b]));
+  const latestMonth = STATE.to.slice(0, 7);
+  const latestMonthLabel = new Date(latestMonth + '-01T00:00:00Z')
+    .toLocaleString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+
+  const projs = new Map();
+  for (const e of entries) {
+    const key = (e.client || '') + '|' + e.project;
+    if (!projs.has(key)) projs.set(key, { project: e.project, client: e.client || '', hours: 0, people: new Map() });
+    const p = projs.get(key);
+    p.hours += e.hours;
+    if (!p.people.has(e.person)) p.people.set(e.person, { hours: 0, last: '', lm: 0 });
+    const pp = p.people.get(e.person);
+    pp.hours += e.hours;
+    if (e.date > pp.last) pp.last = e.date;
+    if (e.date.slice(0, 7) === latestMonth) pp.lm += e.hours;
+  }
+  const cards = [...projs.entries()].map(([key, p]) => {
+    const b = budgetOf.get(key);
+    return { ...p, budget: b, pct: b && b.budget ? (b.spent / b.budget) * 100 : -1 };
+  });
+  // Budgeted first (highest % used on top), then the rest by hours.
+  cards.sort((a, b) => (b.pct - a.pct) || (b.hours - a.hours));
+
+  const host = $('#projCardHost');
+  if (!cards.length) { host.innerHTML = `<div class="empty">No data in this filter.</div>`; return; }
+
+  const amt = (n, unit) => unit === '$' ? '$' + Math.round(n).toLocaleString() : fmt(n) + 'h';
+  host.innerHTML = cards.map(c => {
+    const people = [...c.people.entries()].sort((a, b) => b[1].hours - a[1].hours);
+    const rows = people.map(([name, v]) => `<tr${v.lm === 0 ? ' class="dim"' : ''}>
+        <td>${escapeHtml(name)}</td>
+        <td class="num">${fmt(v.hours)}</td>
+        <td class="num">${((v.hours / (c.hours || 1)) * 100).toFixed(1)}%</td>
+        <td>${v.last}</td>
+        <td class="num">${v.lm > 0 ? fmt(v.lm) : '—'}</td>
+      </tr>`).join('');
+    let budgetHtml = `<div class="meta">No budget set in Harvest.</div>`;
+    if (c.budget) {
+      const b = c.budget;
+      const lv = c.pct > 100 ? 'red' : c.pct >= BUDGET_WARN_PCT ? 'gold' : '';
+      budgetHtml = `
+        <div class="meta">Budget${b.monthly ? ' (this month)' : ''}: <strong>${amt(b.spent, b.unit)}</strong> of ${amt(b.budget, b.unit)} used ·
+          <span class="${b.remaining < 0 ? 'over' : ''}" style="${b.remaining < 0 ? 'color:var(--red);font-weight:700' : ''}">${amt(b.remaining, b.unit)} remaining</span> ·
+          <strong style="${lv === 'red' ? 'color:var(--red)' : ''}">${c.pct.toFixed(0)}%</strong></div>
+        <div class="bbar ${lv}" style="margin-top:6px;max-width:420px"><span style="width:${Math.min(c.pct, 100)}%"></span></div>`;
+    }
+    return `<div class="person-card"${c.pct > 100 ? ' style="border-top-color:var(--red)"' : ''}>
+      <div class="head">
+        <div>
+          <h3>${escapeHtml(c.project)}</h3>
+          <div class="meta">${escapeHtml(c.client)}${c.client ? ' · ' : ''}${people.length} ${people.length === 1 ? 'person' : 'people'} in this filter</div>
+          ${budgetHtml}
+        </div>
+        <div class="total">${fmt(c.hours)} h</div>
+      </div>
+      <div class="ptable" style="margin-top:14px">
+        <table>
+          <tr><th>Person</th><th class="num">Hours</th><th class="num">% of project</th><th>Last entry</th><th class="num">${escapeHtml(latestMonthLabel)} hrs</th></tr>
+          ${rows}
+        </table>
+      </div>
+    </div>`;
+  }).join('');
 }
 
 function renderPerson(entries) {
@@ -890,6 +1066,7 @@ function renderAll() {
   renderMonth(entries);
   renderProject(entries);
   renderPerson(entries);
+  renderProjectCards(entries);
 }
 
 function buildPeopleChips() {
@@ -951,6 +1128,7 @@ $('#resetBtn').addEventListener('click', () => {
   renderAll();
 });
 
+renderBudget();
 buildPeopleChips();
 buildProjectSelect();
 wireDates();
@@ -984,7 +1162,8 @@ def main():
 
     keep_ids = resolve_team_ids()
     entries = fetch_entries(keep_ids, from_date, to_date)
-    payload = build_payload(entries, from_date, to_date)
+    budgets = fetch_budgets()
+    payload = build_payload(entries, from_date, to_date, budgets)
 
     os.makedirs("docs", exist_ok=True)
     with open("docs/data.json", "w", encoding="utf-8") as f:
