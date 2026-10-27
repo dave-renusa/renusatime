@@ -154,6 +154,7 @@ def fetch_budgets():
             continue  # no budget set on this project
         out.append({
             "project_id": r.get("project_id"),
+            "budget_by": r.get("budget_by"),
             "project": r.get("project_name", ""),
             "client": r.get("client_name", ""),
             # "project_cost" / "task_fees" budgets are dollars; the rest are hours
@@ -167,18 +168,41 @@ def fetch_budgets():
     return out
 
 
+def budget_scope(b):
+    # Per-task and per-person budgets only count time on the tasks or people
+    # that have their own budget. Returns (time entry field, allowed ids), or
+    # None when all of the project's time counts.
+    if b["budget_by"] in ("task", "task_fees"):
+        path, key, field = "/task_assignments", "task_assignments", "task"
+    elif b["budget_by"] == "person":
+        path, key, field = "/user_assignments", "user_assignments", "user"
+    else:
+        return None
+    try:
+        rows = get_all("/projects/%s%s" % (b["project_id"], path), key)
+    except SystemExit:
+        print("WARNING: could not read %s for %s; counting all its time."
+              % (key, b["project"]), file=sys.stderr)
+        return None
+    return field, {(r.get(field) or {}).get("id") for r in rows if r.get("budget")}
+
+
 def add_monthly_actuals(budgets, raw_entries, to_date):
     # Harvest's budget report only gives the current month for monthly
     # budgets, so rebuild every month from the time entries: hours for hour
     # budgets, billable amount (hours x billable rate) for dollar budgets.
     # rounded_hours matches Harvest's reports when time rounding is on.
     by_id = {b["project_id"]: b for b in budgets}
+    scopes = {b["project_id"]: budget_scope(b) for b in budgets}
     tallies = {b["project_id"]: {"all": {}, "billable": {}} for b in budgets}
     for te in raw_entries:
         pid = (te.get("project") or {}).get("id")
         b = by_id.get(pid)
         if not b:
             continue
+        scope = scopes[pid]
+        if scope and (te.get(scope[0]) or {}).get("id") not in scope[1]:
+            continue  # task or person without its own budget: Harvest skips it
         hrs = float(te.get("rounded_hours") or te.get("hours") or 0.0)
         billable = bool(te.get("billable"))
         if b["unit"] == "$":
@@ -208,8 +232,8 @@ def add_monthly_actuals(budgets, raw_entries, to_date):
             b["before"] = round(max(b["spent"] - ours, 0.0), 2)
             ours += b["before"]
         if abs(ours - b["spent"]) > max(1.0, 0.01 * b["spent"]):
-            print("NOTE: %s / %s: rebuilt %s%.2f vs Harvest %.2f" %
-                  (b["client"], b["project"], b["unit"], ours, b["spent"]))
+            print("NOTE: %s / %s (%s budget): rebuilt %s%.2f vs Harvest %.2f" %
+                  (b["client"], b["project"], b["budget_by"], b["unit"], ours, b["spent"]))
 
 
 def build_payload(entries, from_date, to_date, budgets=None):
