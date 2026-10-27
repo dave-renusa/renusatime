@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-10-27 14:32 UTC",
+    "generated": "2026-10-27 14:38 UTC",
     "year": 2026,
     "from": "2026-01-01",
     "to": "2026-10-27",
@@ -88273,6 +88273,7 @@
   "budgets": [
     {
       "project_id": 48627966,
+      "budget_by": "project_cost",
       "project": "BESS",
       "client": "AES",
       "unit": "$",
@@ -88290,6 +88291,7 @@
     },
     {
       "project_id": 44686051,
+      "budget_by": "person",
       "project": "Pronghorn",
       "client": "Aileron",
       "unit": "h",
@@ -88300,13 +88302,14 @@
       "actuals": {
         "2026-01": 76.5,
         "2026-02": 44.3,
-        "2026-03": 78.5,
+        "2026-03": 78.0,
         "2026-04": 56.25,
         "2026-05": 25.0
       }
     },
     {
       "project_id": 44499180,
+      "budget_by": "person",
       "project": "Sidewinder",
       "client": "Aileron",
       "unit": "h",
@@ -88317,12 +88320,13 @@
       "actuals": {
         "2026-01": 49.75,
         "2026-02": 28.0,
-        "2026-03": 2.25,
+        "2026-03": 1.5,
         "2026-04": 1.5
       }
     },
     {
       "project_id": 49252661,
+      "budget_by": "project_cost",
       "project": "Training",
       "client": "Arevon",
       "unit": "$",
@@ -88337,6 +88341,7 @@
     },
     {
       "project_id": 49496280,
+      "budget_by": "project_cost",
       "project": "Ulster NY",
       "client": "BayWa.re",
       "unit": "$",
@@ -88349,6 +88354,7 @@
     },
     {
       "project_id": 49219023,
+      "budget_by": "project_cost",
       "project": "Butler County",
       "client": "Bracewell",
       "unit": "$",
@@ -88363,6 +88369,7 @@
     },
     {
       "project_id": 49314749,
+      "budget_by": "project_cost",
       "project": "Frontline Comms Training",
       "client": "DTE Energy",
       "unit": "$",
@@ -88378,6 +88385,7 @@
     },
     {
       "project_id": 44499203,
+      "budget_by": "person",
       "project": "Cloudwalker Wind",
       "client": "Enel",
       "unit": "h",
@@ -88387,19 +88395,20 @@
       "remaining": 96.42,
       "actuals": {
         "2026-01": 186.75,
-        "2026-02": 142.59,
-        "2026-03": 167.16,
-        "2026-04": 41.41,
-        "2026-05": 34.75,
-        "2026-06": 22.0,
+        "2026-02": 138.59,
+        "2026-03": 163.66,
+        "2026-04": 39.41,
+        "2026-05": 33.75,
+        "2026-06": 21.0,
         "2026-07": 20.07,
-        "2026-08": 14.83,
+        "2026-08": 14.08,
         "2026-09": 27.51,
         "2026-10": 8.58
       }
     },
     {
       "project_id": 44499253,
+      "budget_by": "person",
       "project": "Arizona",
       "client": "Farm to Power",
       "unit": "h",
@@ -88410,18 +88419,14 @@
       "actuals": {
         "2026-01": 38.52,
         "2026-02": 30.5,
-        "2026-03": 44.25,
+        "2026-03": 42.0,
         "2026-04": 45.0,
-        "2026-05": 26.25,
-        "2026-06": 25.25,
-        "2026-07": 15.25,
-        "2026-08": 19.5,
-        "2026-09": 13.5,
-        "2026-10": 3.5
+        "2026-05": 20.75
       }
     },
     {
       "project_id": 44499362,
+      "budget_by": "person",
       "project": "New Mexico",
       "client": "Farm to Power",
       "unit": "h",
@@ -88437,6 +88442,7 @@
     },
     {
       "project_id": 48949363,
+      "budget_by": "project_cost",
       "project": "Belvedere Tech Campus - Fredericksburg",
       "client": "Highland Digital",
       "unit": "$",
@@ -88452,6 +88458,7 @@
     },
     {
       "project_id": 47294705,
+      "budget_by": "project_cost",
       "project": "Cattle Trail Solar",
       "client": "ibV Energy",
       "unit": "$",
@@ -88473,6 +88480,7 @@
     },
     {
       "project_id": 44499371,
+      "budget_by": "project_cost",
       "project": "Whitman Co Solar Projects",
       "client": "ibV Energy",
       "unit": "$",
@@ -88494,6 +88502,7 @@
     },
     {
       "project_id": 48792995,
+      "budget_by": "project_cost",
       "project": "Training",
       "client": "Liuna",
       "unit": "$",
@@ -88508,6 +88517,7 @@
     },
     {
       "project_id": 44927942,
+      "budget_by": "person",
       "project": "Allium",
       "client": "Longroad Energy",
       "unit": "h",
@@ -88516,12 +88526,13 @@
       "spent": 0.0,
       "remaining": 72.0,
       "actuals": {
-        "2026-01": 45.25,
+        "2026-01": 44.75,
         "2026-02": 0.25
       }
     },
     {
       "project_id": 48758147,
+      "budget_by": "project_cost",
       "project": "Yellow Knight",
       "client": "Longroad Energy",
       "unit": "$",
@@ -88538,6 +88549,7 @@
     },
     {
       "project_id": 49270380,
+      "budget_by": "project_cost",
       "project": "SPC/HGP",
       "client": "New Horizon",
       "unit": "$",
@@ -88553,6 +88565,7 @@
     },
     {
       "project_id": 49067632,
+      "budget_by": "project_cost",
       "project": "Highline Research",
       "client": "Orsted",
       "unit": "$",
@@ -88569,6 +88582,7 @@
     },
     {
       "project_id": 47250055,
+      "budget_by": "project_cost",
       "project": "1500 Gateway Data Center",
       "client": "Penzance",
       "unit": "$",
@@ -88590,6 +88604,7 @@
     },
     {
       "project_id": 47716200,
+      "budget_by": "project_cost",
       "project": "Berkeley",
       "client": "Penzance",
       "unit": "$",
@@ -88610,6 +88625,7 @@
     },
     {
       "project_id": 49110161,
+      "budget_by": "project_cost",
       "project": "Hawkeye Groundbreaking",
       "client": "Ranger Power",
       "unit": "$",
@@ -88625,6 +88641,7 @@
     },
     {
       "project_id": 48766544,
+      "budget_by": "project_cost",
       "project": "Montcalm Ground Breaking",
       "client": "Ranger Power",
       "unit": "$",
@@ -88641,6 +88658,7 @@
     },
     {
       "project_id": 44499172,
+      "budget_by": "person",
       "project": "Ren Internal",
       "client": "RenUSA",
       "unit": "h",
@@ -88649,20 +88667,21 @@
       "spent": 175.5,
       "remaining": -75.5,
       "actuals": {
-        "2026-01": 0.0,
-        "2026-02": 0.0,
-        "2026-03": 0.0,
-        "2026-04": 0.0,
-        "2026-05": 0.0,
-        "2026-06": 0.0,
-        "2026-07": 0.0,
-        "2026-08": 0.0,
-        "2026-09": 0.0,
-        "2026-10": 0.0
+        "2026-01": 254.58,
+        "2026-02": 131.25,
+        "2026-03": 107.83,
+        "2026-04": 141.83,
+        "2026-05": 123.99,
+        "2026-06": 84.43,
+        "2026-07": 144.0,
+        "2026-08": 122.6,
+        "2026-09": 147.0,
+        "2026-10": 175.5
       }
     },
     {
       "project_id": 48191236,
+      "budget_by": "project",
       "project": "MI - Media Support",
       "client": "RockLocker",
       "unit": "h",
@@ -88675,6 +88694,7 @@
     },
     {
       "project_id": 49217139,
+      "budget_by": "project_cost",
       "project": "Greenbelt",
       "client": "RWE",
       "unit": "$",
@@ -88688,6 +88708,7 @@
     },
     {
       "project_id": 48989606,
+      "budget_by": "project_cost",
       "project": "Humboldt",
       "client": "RWE",
       "unit": "$",
@@ -88703,6 +88724,7 @@
     },
     {
       "project_id": 48990668,
+      "budget_by": "project_cost",
       "project": "Pottawattamie",
       "client": "RWE",
       "unit": "$",
@@ -88718,6 +88740,7 @@
     },
     {
       "project_id": 44499245,
+      "budget_by": "project_cost",
       "project": "Rouget Road",
       "client": "RWE",
       "unit": "$",
@@ -88735,6 +88758,7 @@
     },
     {
       "project_id": 44499402,
+      "budget_by": "project_cost",
       "project": "Silver Maple",
       "client": "RWE",
       "unit": "$",
@@ -88754,6 +88778,7 @@
     },
     {
       "project_id": 44499250,
+      "budget_by": "project_cost",
       "project": "Walker Road Solar",
       "client": "RWE",
       "unit": "$",
@@ -88774,6 +88799,7 @@
     },
     {
       "project_id": 44499416,
+      "budget_by": "project_cost",
       "project": "Gipper Solar",
       "client": "Scout Clean Energy",
       "unit": "$",
@@ -88795,6 +88821,7 @@
     },
     {
       "project_id": 49477705,
+      "budget_by": "project_cost",
       "project": "Golden Hour Solar-Rice County, MN",
       "client": "Scout Clean Energy",
       "unit": "$",
@@ -88809,6 +88836,7 @@
     },
     {
       "project_id": 44686071,
+      "budget_by": "person",
       "project": "Twin Creeks",
       "client": "Scout Clean Energy",
       "unit": "h",
@@ -88817,13 +88845,14 @@
       "spent": 0.0,
       "remaining": 22.0,
       "actuals": {
-        "2026-01": 36.75,
+        "2026-01": 35.75,
         "2026-02": 34.25,
-        "2026-03": 26.0
+        "2026-03": 25.5
       }
     },
     {
       "project_id": 46983423,
+      "budget_by": "project_cost",
       "project": "Green Sun Wind",
       "client": "Steelhead",
       "unit": "$",
@@ -88846,6 +88875,7 @@
     },
     {
       "project_id": 44499443,
+      "budget_by": "project_cost",
       "project": "Harvest Hills",
       "client": "Steelhead",
       "unit": "$",
@@ -88868,6 +88898,7 @@
     },
     {
       "project_id": 46983481,
+      "budget_by": "project_cost",
       "project": "Ringgold Wind",
       "client": "Steelhead",
       "unit": "$",
@@ -88890,6 +88921,7 @@
     },
     {
       "project_id": 48274943,
+      "budget_by": "project_cost",
       "project": "Frigid Creek Solar/Mason County, WA",
       "client": "Treaty Oak Clean Energy",
       "unit": "$",
@@ -88908,6 +88940,7 @@
     },
     {
       "project_id": 48274854,
+      "budget_by": "project_cost",
       "project": "Grandview Solar/Pueblo County, CO",
       "client": "Treaty Oak Clean Energy",
       "unit": "$",
@@ -88926,6 +88959,7 @@
     },
     {
       "project_id": 48274932,
+      "budget_by": "project_cost",
       "project": "Long Meadow Solar/Morgan County, CO",
       "client": "Treaty Oak Clean Energy",
       "unit": "$",
@@ -88944,6 +88978,7 @@
     },
     {
       "project_id": 47452779,
+      "budget_by": "project_cost",
       "project": "Home Range Digital",
       "client": "Triple Oak",
       "unit": "$",
@@ -88965,6 +89000,7 @@
     },
     {
       "project_id": 44499442,
+      "budget_by": "project_cost",
       "project": "Western Freedom",
       "client": "Western Freedom",
       "unit": "$",
