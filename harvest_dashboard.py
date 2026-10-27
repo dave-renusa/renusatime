@@ -112,6 +112,9 @@ def resolve_team_ids():
 
 
 def fetch_entries(keep_ids, from_date, to_date):
+    # Returns (team entries for the dashboard, raw entries for everyone).
+    # The raw list feeds the budget actuals, which count everyone on a
+    # project the same way Harvest's budget report does.
     raw = get_all("/time_entries", "time_entries",
                   {"from": from_date.isoformat(), "to": to_date.isoformat()})
     out = []
@@ -129,7 +132,7 @@ def fetch_entries(keep_ids, from_date, to_date):
             "client": client.get("name", ""),
             "hours": float(te.get("hours") or 0.0),
         })
-    return out
+    return out, raw
 
 
 def fetch_budgets():
@@ -150,6 +153,7 @@ def fetch_budgets():
         if not budget or r.get("budget_by") == "none":
             continue  # no budget set on this project
         out.append({
+            "project_id": r.get("project_id"),
             "project": r.get("project_name", ""),
             "client": r.get("client_name", ""),
             # "project_cost" / "task_fees" budgets are dollars; the rest are hours
@@ -161,6 +165,51 @@ def fetch_budgets():
         })
     print("Budgets: %d active projects with a budget set." % len(out))
     return out
+
+
+def add_monthly_actuals(budgets, raw_entries, to_date):
+    # Harvest's budget report only gives the current month for monthly
+    # budgets, so rebuild every month from the time entries: hours for hour
+    # budgets, billable amount (hours x billable rate) for dollar budgets.
+    # rounded_hours matches Harvest's reports when time rounding is on.
+    by_id = {b["project_id"]: b for b in budgets}
+    tallies = {b["project_id"]: {"all": {}, "billable": {}} for b in budgets}
+    for te in raw_entries:
+        pid = (te.get("project") or {}).get("id")
+        b = by_id.get(pid)
+        if not b:
+            continue
+        hrs = float(te.get("rounded_hours") or te.get("hours") or 0.0)
+        billable = bool(te.get("billable"))
+        if b["unit"] == "$":
+            all_val = bill_val = hrs * float(te.get("billable_rate") or 0.0) if billable else 0.0
+        else:
+            all_val, bill_val = hrs, (hrs if billable else 0.0)
+        month = (te.get("spent_date") or "")[:7]
+        t = tallies[pid]
+        t["all"][month] = t["all"].get(month, 0.0) + all_val
+        t["billable"][month] = t["billable"].get(month, 0.0) + bill_val
+    this_month = to_date.isoformat()[:7]
+
+    def harvest_view(b, actuals):
+        # What Harvest's "spent" should equal if these actuals are right.
+        return actuals.get(this_month, 0.0) if b["monthly"] else sum(actuals.values())
+
+    for b in budgets:
+        t = tallies[b["project_id"]]
+        # Some hour budgets count only billable time. Use whichever reading
+        # lines up with Harvest's own number for this project.
+        actuals = min(t.values(), key=lambda a: abs(harvest_view(b, a) - b["spent"]))
+        b["actuals"] = {m: round(v, 2) for m, v in sorted(actuals.items())}
+        ours = harvest_view(b, b["actuals"])
+        if not b["monthly"]:
+            # Total budgets are all-time; whatever Harvest counts beyond this
+            # year's entries was spent before the dashboard's window.
+            b["before"] = round(max(b["spent"] - ours, 0.0), 2)
+            ours += b["before"]
+        if abs(ours - b["spent"]) > max(1.0, 0.01 * b["spent"]):
+            print("NOTE: %s / %s: rebuilt %s%.2f vs Harvest %.2f" %
+                  (b["client"], b["project"], b["unit"], ours, b["spent"]))
 
 
 def build_payload(entries, from_date, to_date, budgets=None):
@@ -270,6 +319,17 @@ HTML_TEMPLATE = r"""<!doctype html>
   .bbar.gold span { background: var(--gold); }
   .bbar.red span { background: var(--red); }
   td.over { color: var(--red); font-weight: 700; }
+  .bva { overflow-x: auto; margin-bottom: 18px; }
+  .bva h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin: 6px 0 8px; font-weight: 600; }
+  .bva table { font-size: 13px; }
+  .bva td, .bva th { padding: 7px 10px; white-space: nowrap; }
+  .bva td.cell { text-align: right; font-variant-numeric: tabular-nums; line-height: 1.25; }
+  .bva td.cell .var { display: block; font-size: 11px; font-weight: 700; }
+  .bva td.cell.under .var { color: #1f7a44; }
+  .bva td.cell.over { background: #fbeaea; }
+  .bva td.cell.over .var { color: var(--red); }
+  .bva td.cell.open .var { color: var(--muted); font-weight: 400; }
+  .bva tr.tally td { background: var(--cream); font-size: 12px; color: var(--muted); }
   footer .americana { height: 8px; background: repeating-linear-gradient(90deg, var(--red) 0 40px, #fff 40px 80px, var(--navy) 80px 120px); }
   footer .bar { background: var(--navy); color: #cdd6e3; font-size: 12px; padding: 12px 32px; }
 </style>
@@ -364,6 +424,11 @@ HTML_TEMPLATE = r"""<!doctype html>
     <div class="chart-card">
       <h2>Project table</h2>
       <div id="projectTableHost"></div>
+    </div>
+    <div class="chart-card">
+      <h2>Budget vs. actual by month</h2>
+      <div class="budget-note">Each month's actual against the Harvest budget, for everyone on the project: billable dollars for dollar budgets, hours for hour budgets. Green is under budget, red is over. The current month is still open, so it only turns red once it's already over. The project and date filters apply; the people filter doesn't.</div>
+      <div id="bvaHost"></div>
     </div>
   </section>
 
@@ -800,6 +865,74 @@ function renderBudget() {
     : `<div class="empty">No project budgets found. Budgets are set per project in Harvest (Projects → Edit → Budget), and the token needs Administrator access to read them.</div>`;
 }
 
+// Budget vs. actual by month (By project tab). Monthly budgets compare each
+// month to the budget; total budgets show the running total against it.
+function renderBudgetByMonth() {
+  const host = $('#bvaHost');
+  const firstM = STATE.from.slice(0, 7), lastM = STATE.to.slice(0, 7);
+  const openM = DATA.meta.to.slice(0, 7);
+  const months = [];
+  for (let d = new Date(firstM + '-01T00:00:00Z'); d.toISOString().slice(0, 7) <= lastM; d.setUTCMonth(d.getUTCMonth() + 1)) {
+    months.push(d.toISOString().slice(0, 7));
+  }
+  const mLabel = m => new Date(m + '-01T00:00:00Z').toLocaleString('en-US', { month: 'short', timeZone: 'UTC' })
+    + (m === openM ? '*' : '');
+  const amt = (n, unit) => unit === '$' ? '$' + Math.round(n).toLocaleString() : fmt(n) + 'h';
+  const signed = (n, unit) => (n > 0 ? '+' : n < 0 ? '−' : '') + amt(Math.abs(n), unit);
+
+  const budgets = (DATA.budgets || []).filter(b => b.actuals && (!STATE.project || b.project === STATE.project));
+  if (!budgets.length || !months.length) {
+    host.innerHTML = `<div class="empty">No budgeted projects in this filter.</div>`;
+    return;
+  }
+  const byName = (a, b) => (a.client + a.project).localeCompare(b.client + b.project);
+  const monthly = budgets.filter(b => b.monthly).sort(byName);
+  const total = budgets.filter(b => !b.monthly).sort(byName);
+  const head = first => `<tr><th>Client</th><th>Project</th><th class="num">${first}</th>${months.map(m => `<th class="num">${mLabel(m)}</th>`).join('')}`;
+
+  let html = '';
+  if (monthly.length) {
+    const overCount = months.map(() => 0), underCount = months.map(() => 0);
+    const rows = monthly.map(b => {
+      let net = 0;
+      const cells = months.map((m, i) => {
+        // No time at all usually means the project hadn't started yet.
+        if (!(m in b.actuals)) return `<td class="cell open">—</td>`;
+        const a = b.actuals[m], v = a - b.budget;
+        const isOpen = m === openM;
+        if (!isOpen) net += v;
+        const cls = v > 0 ? 'over' : isOpen ? 'open' : 'under';
+        if (v > 0) overCount[i]++; else if (!isOpen) underCount[i]++;
+        const varText = isOpen && v <= 0 ? amt(-v, b.unit) + ' left' : (v > 0 ? 'over ' : 'under ') + amt(Math.abs(v), b.unit);
+        return `<td class="cell ${cls}">${amt(a, b.unit)}<span class="var">${varText}</span></td>`;
+      }).join('');
+      const closed = months.filter(m => m !== openM && m in b.actuals).length;
+      const netCell = closed
+        ? `<td class="cell ${net > 0 ? 'over' : 'under'}">${signed(net, b.unit)}<span class="var">${net > 0 ? 'over' : 'under'}</span></td>`
+        : `<td class="cell open">—</td>`;
+      return `<tr><td>${escapeHtml(b.client)}</td><td>${escapeHtml(b.project)}</td><td class="num">${amt(b.budget, b.unit)}</td>${cells}${netCell}</tr>`;
+    }).join('');
+    const tally = `<tr class="tally"><td colspan="3">Projects over / under</td>${months.map((m, i) =>
+      `<td class="num">${overCount[i]} / ${m === openM ? '…' : underCount[i]}</td>`).join('')}<td></td></tr>`;
+    html += `<div class="bva"><h3>Monthly budgets</h3><table>${head('Budget / mo')}<th class="num">Net, closed months</th></tr>${rows}${tally}</table></div>`;
+  }
+  if (total.length) {
+    const rows = total.map(b => {
+      // Running total starts with anything spent before this year and
+      // before the first month shown.
+      let run = (b.before || 0) + Object.entries(b.actuals).filter(([m]) => m < firstM).reduce((s, [, v]) => s + v, 0);
+      const cells = months.map(m => {
+        run += b.actuals[m] || 0;
+        const v = run - b.budget;
+        return `<td class="cell ${v > 0 ? 'over' : 'under'}">${amt(run, b.unit)}<span class="var">${v > 0 ? 'over ' + amt(v, b.unit) : amt(-v, b.unit) + ' left'}</span></td>`;
+      }).join('');
+      return `<tr><td>${escapeHtml(b.client)}</td><td>${escapeHtml(b.project)}</td><td class="num">${amt(b.budget, b.unit)}</td>${cells}</tr>`;
+    }).join('');
+    html += `<div class="bva"><h3>Total budgets · running total used</h3><table>${head('Budget')}</tr>${rows}</table></div>`;
+  }
+  host.innerHTML = html + (months.includes(openM) ? `<div class="budget-note">* Current month, still in progress.</div>` : '');
+}
+
 // Project cards: the person-card idea turned around — who worked on each
 // project, with its Harvest budget bar when one is set.
 function renderProjectCards(entries) {
@@ -1065,6 +1198,7 @@ function renderAll() {
   renderWeek(entries);
   renderMonth(entries);
   renderProject(entries);
+  renderBudgetByMonth();
   renderPerson(entries);
   renderProjectCards(entries);
 }
@@ -1161,8 +1295,9 @@ def main():
     to_date = today
 
     keep_ids = resolve_team_ids()
-    entries = fetch_entries(keep_ids, from_date, to_date)
+    entries, raw_entries = fetch_entries(keep_ids, from_date, to_date)
     budgets = fetch_budgets()
+    add_monthly_actuals(budgets, raw_entries, to_date)
     payload = build_payload(entries, from_date, to_date, budgets)
 
     os.makedirs("docs", exist_ok=True)

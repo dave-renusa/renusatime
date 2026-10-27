@@ -61,6 +61,17 @@ project, not limited by the dashboard's filters. Change the 80% line with
 `BUDGET_WARN_PCT` in the HTML. To get a project on the list, set its budget
 in Harvest (Projects → Edit → Budget).
 
+The **By project** tab also has a **Budget vs. actual by month** table. For
+monthly budgets it shows each month's actual against the budget, green when
+under and red when over, plus the net over/under across closed months.
+Months with no time logged show a dash and don't count toward the net. For
+total budgets it shows the running total used at the end of each month. The
+report only gives Harvest's current-month number, so each month is rebuilt
+from the time entries: billable amount (rounded hours × billable rate) for
+dollar budgets and hours for hour budgets, counting everyone on the project.
+If a rebuilt current month doesn't match Harvest's own number, the Actions
+log prints a `NOTE:` line for that project. Expenses aren't included.
+
 ## Notes and limits
 
 - The dashboard is **public** — anyone with the link can see named team hours.
