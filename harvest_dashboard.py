@@ -209,11 +209,17 @@ def add_monthly_actuals(budgets, raw_entries, to_date):
             all_val = bill_val = hrs * float(te.get("billable_rate") or 0.0) if billable else 0.0
         else:
             all_val, bill_val = hrs, (hrs if billable else 0.0)
-        month = (te.get("spent_date") or "")[:7]
+        day = te.get("spent_date") or ""
         t = tallies[pid]
-        t["all"][month] = t["all"].get(month, 0.0) + all_val
-        t["billable"][month] = t["billable"].get(month, 0.0) + bill_val
+        t["all"][day] = t["all"].get(day, 0.0) + all_val
+        t["billable"][day] = t["billable"].get(day, 0.0) + bill_val
     this_month = to_date.isoformat()[:7]
+
+    def by_month(daily):
+        out = {}
+        for d, v in daily.items():
+            out[d[:7]] = out.get(d[:7], 0.0) + v
+        return out
 
     def harvest_view(b, actuals):
         # What Harvest's "spent" should equal if these actuals are right.
@@ -223,8 +229,10 @@ def add_monthly_actuals(budgets, raw_entries, to_date):
         t = tallies[b["project_id"]]
         # Some hour budgets count only billable time. Use whichever reading
         # lines up with Harvest's own number for this project.
-        actuals = min(t.values(), key=lambda a: abs(harvest_view(b, a) - b["spent"]))
-        b["actuals"] = {m: round(v, 2) for m, v in sorted(actuals.items())}
+        daily = min(t.values(), key=lambda a: abs(harvest_view(b, by_month(a)) - b["spent"]))
+        b["actuals"] = {m: round(v, 2) for m, v in sorted(by_month(daily).items())}
+        # Daily totals let the Budget tab add up any date range.
+        b["daily"] = {d: round(v, 2) for d, v in sorted(daily.items()) if v}
         ours = harvest_view(b, b["actuals"])
         if not b["monthly"]:
             # Total budgets are all-time; whatever Harvest counts beyond this
@@ -343,6 +351,16 @@ HTML_TEMPLATE = r"""<!doctype html>
   .bbar.gold span { background: var(--gold); }
   .bbar.red span { background: var(--red); }
   td.over { color: var(--red); font-weight: 700; }
+  tr.brow { cursor: pointer; }
+  tr.brow:hover td { background: #faf8f3; }
+  tr.brow td.proj::before { content: '▸'; display: inline-block; width: 14px; color: var(--muted); }
+  tr.brow.open td.proj::before { content: '▾'; }
+  tr.brow.open td { background: #faf8f3; border-bottom-color: transparent; }
+  td .sub { display: block; font-size: 11px; color: var(--muted); white-space: nowrap; }
+  tr.bdetail > td { background: #faf8f3; padding: 4px 16px 18px; }
+  .bdetail .figs { display: flex; gap: 22px; flex-wrap: wrap; font-size: 13px; color: var(--muted); margin: 4px 0 10px; }
+  .bdetail .figs strong { color: var(--navy); font-size: 15px; }
+  .bdetail .chart-wrap { height: 260px; background: #fff; padding: 10px; }
   .bva { overflow-x: auto; margin-bottom: 18px; }
   .bva h3 { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin: 6px 0 8px; font-weight: 600; }
   .bva table { font-size: 13px; }
@@ -410,10 +428,24 @@ HTML_TEMPLATE = r"""<!doctype html>
   </nav>
 
   <section class="view active" id="view-budget">
+    <div class="filters budget-range">
+      <div class="group">
+        <label class="head">Time frame</label>
+        <div class="chips" id="budgetPresets"></div>
+      </div>
+      <div class="group">
+        <label class="head">From</label>
+        <input type="date" id="budgetFrom">
+      </div>
+      <div class="group">
+        <label class="head">To</label>
+        <input type="date" id="budgetTo">
+      </div>
+    </div>
     <div class="budget-summary" id="budgetSummary"></div>
     <div class="chart-card">
       <h2>Projects by % of budget used</h2>
-      <div class="budget-note">Straight from Harvest's Project Budget report: all-time totals for everyone on the project. The people, project and date filters above don't apply to this tab. Monthly budgets show the current month.</div>
+      <div class="budget-note">For everyone on the project, using the time frame above (the people, project and date filters at the top don't apply here). Monthly budgets are the monthly amount times the months covered, with partial months prorated by day and nothing counted before a project's first logged time. Total budgets show everything used from the project's start through the end date, plus how much of that landed in the time frame. Click a project for its month-by-month detail.</div>
       <div id="budgetTableHost"></div>
     </div>
   </section>
@@ -854,39 +886,200 @@ function renderProject(entries) {
     : `<div class="empty">No data in this filter.</div>`;
 }
 
-// Budget tab: Harvest's own budget numbers, independent of the filters.
+// Budget tab: Harvest budgets measured over a chosen time frame, for everyone
+// on the project. Independent of the filters at the top of the page.
 const BUDGET_WARN_PCT = 80;  // gold at or above this, red over 100
+const BSTATE = { from: '', to: '', preset: 'month', open: new Set() };
+
+const utcDate = s => new Date(s + 'T00:00:00Z');
+const isoDay = d => d.toISOString().slice(0, 10);
+function monthEnd(m) { return isoDay(new Date(Date.UTC(+m.slice(0, 4), +m.slice(5, 7), 0))); }
+function daysInMonth(m) { return +monthEnd(m).slice(8); }
+function monthsBetween(firstM, lastM) {
+  const out = [];
+  for (let d = utcDate(firstM + '-01'); isoDay(d).slice(0, 7) <= lastM; d.setUTCMonth(d.getUTCMonth() + 1)) {
+    out.push(isoDay(d).slice(0, 7));
+  }
+  return out;
+}
+const budgetAmt = (n, unit) => unit === '$' ? '$' + Math.round(n).toLocaleString() : fmt(n) + 'h';
+const budgetLevel = pct => pct > 100 ? 'red' : pct >= BUDGET_WARN_PCT ? 'gold' : '';
+
+function budgetPresets() {
+  const m = DATA.meta.to.slice(0, 7), y = +m.slice(0, 4), mo = +m.slice(5, 7);
+  const prevM = isoDay(new Date(Date.UTC(y, mo - 2, 1))).slice(0, 7);
+  const q = Math.floor((mo - 1) / 3);
+  const [ly, lq] = q === 0 ? [y - 1, 3] : [y, q - 1];
+  const qFrom = (yy, qq) => isoDay(new Date(Date.UTC(yy, qq * 3, 1)));
+  const qTo = (yy, qq) => isoDay(new Date(Date.UTC(yy, qq * 3 + 3, 0)));
+  return [
+    { key: 'month', label: 'This month', from: m + '-01', to: monthEnd(m) },
+    { key: 'last', label: 'Last month', from: prevM + '-01', to: monthEnd(prevM) },
+    { key: 'quarter', label: 'This quarter', from: qFrom(y, q), to: qTo(y, q) },
+    { key: 'lastq', label: 'Last quarter', from: qFrom(ly, lq), to: qTo(ly, lq) },
+    { key: 'ytd', label: 'Year to date', from: DATA.meta.from, to: monthEnd(m) },
+  ];
+}
+
+function budgetDaily(b) {
+  if (b.daily) return b.daily;
+  // Data built before daily totals existed: spread each month over its days.
+  const out = {};
+  for (const [m, v] of Object.entries(b.actuals || {})) {
+    const n = daysInMonth(m);
+    for (let i = 1; i <= n; i++) out[m + '-' + String(i).padStart(2, '0')] = v / n;
+  }
+  return out;
+}
+
+// Budget, used and in-range amounts for one project over from..to.
+function budgetInRange(b, from, to) {
+  let inRange = 0, through = 0;
+  for (const [d, v] of Object.entries(budgetDaily(b))) {
+    if (d > to) continue;
+    through += v;
+    if (d >= from) inRange += v;
+  }
+  if (!b.monthly) return { budget: b.budget, used: (b.before || 0) + through, inRange };
+  // No budget for months before the project's first time entry: it hadn't
+  // started yet.
+  const firstM = Object.keys(b.actuals || {}).sort()[0] || to.slice(0, 7);
+  let budget = 0;
+  for (const m of monthsBetween(from.slice(0, 7), to.slice(0, 7))) {
+    if (m < firstM) continue;
+    const s = from > m + '-01' ? from : m + '-01';
+    const e = to < monthEnd(m) ? to : monthEnd(m);
+    budget += b.budget * ((utcDate(e) - utcDate(s)) / 864e5 + 1) / daysInMonth(m);
+  }
+  return { budget, used: inRange, inRange };
+}
 
 function renderBudget() {
-  const rows = (DATA.budgets || []).map(b => ({ ...b, pct: b.budget ? (b.spent / b.budget) * 100 : 0 }));
+  const { from, to } = BSTATE;
+  Object.keys(CHARTS).filter(k => k.startsWith('bd')).forEach(destroy);
+  if (!from || !to || from > to) {
+    $('#budgetSummary').innerHTML = '';
+    $('#budgetTableHost').innerHTML = `<div class="empty">Pick a From date on or before the To date.</div>`;
+    return;
+  }
+  const rows = (DATA.budgets || []).map(b => {
+    const r = budgetInRange(b, from, to);
+    return { b, ...r, remaining: r.budget - r.used, pct: r.budget ? (r.used / r.budget) * 100 : 0 };
+  });
   rows.sort((a, b) => b.pct - a.pct);
-  const level = pct => pct > 100 ? 'red' : pct >= BUDGET_WARN_PCT ? 'gold' : '';
-  const amt = (n, unit) => unit === '$'
-    ? '$' + Math.round(n).toLocaleString()
-    : fmt(n) + 'h';
 
   const over = rows.filter(r => r.pct > 100).length;
-  const near = rows.filter(r => level(r.pct) === 'gold').length;
+  const near = rows.filter(r => budgetLevel(r.pct) === 'gold').length;
   $('#budgetSummary').innerHTML = `
     <div class="stat red"><div class="label">Over budget</div><div class="num">${over}</div></div>
     <div class="stat gold"><div class="label">${BUDGET_WARN_PCT}%+ used</div><div class="num">${near}</div></div>
     <div class="stat"><div class="label">Under ${BUDGET_WARN_PCT}%</div><div class="num">${rows.length - over - near}</div></div>`;
 
   const body = rows.map(r => {
-    const lv = level(r.pct);
-    return `<tr>
-      <td>${escapeHtml(r.client)}</td>
-      <td>${escapeHtml(r.project)}${r.monthly ? ' <span style="color:var(--muted);font-size:12px">(monthly)</span>' : ''}</td>
-      <td class="num">${amt(r.budget, r.unit)}</td>
-      <td class="num">${amt(r.spent, r.unit)}</td>
-      <td class="num${r.remaining < 0 ? ' over' : ''}">${amt(r.remaining, r.unit)}</td>
+    const b = r.b, lv = budgetLevel(r.pct), open = BSTATE.open.has(b.project_id);
+    const row = `<tr class="brow${open ? ' open' : ''}" data-id="${b.project_id}">
+      <td>${escapeHtml(b.client)}</td>
+      <td class="proj">${escapeHtml(b.project)}${b.monthly ? ' <span style="color:var(--muted);font-size:12px">(monthly)</span>' : ''}</td>
+      <td class="num">${budgetAmt(r.budget, b.unit)}${b.monthly ? `<span class="sub">${budgetAmt(b.budget, b.unit)}/mo</span>` : ''}</td>
+      <td class="num">${budgetAmt(r.used, b.unit)}${b.monthly ? '' : `<span class="sub">${budgetAmt(r.inRange, b.unit)} in range</span>`}</td>
+      <td class="num${r.remaining < 0 ? ' over' : ''}">${budgetAmt(r.remaining, b.unit)}</td>
       <td><div class="bbar ${lv}"><span style="width:${Math.min(r.pct, 100)}%"></span></div></td>
       <td class="num${lv === 'red' ? ' over' : ''}">${r.pct.toFixed(0)}%</td>
     </tr>`;
+    return open ? row + `<tr class="bdetail"><td colspan="7">${budgetDetailHtml(r)}</td></tr>` : row;
   }).join('');
   $('#budgetTableHost').innerHTML = rows.length
     ? `<table><tr><th>Client</th><th>Project</th><th class="num">Budget</th><th class="num">Used</th><th class="num">Remaining</th><th></th><th class="num">% used</th></tr>${body}</table>`
     : `<div class="empty">No project budgets found. Budgets are set per project in Harvest (Projects → Edit → Budget), and the token needs Administrator access to read them.</div>`;
+
+  document.querySelectorAll('#budgetTableHost tr.brow').forEach(tr => tr.addEventListener('click', () => {
+    const id = +tr.dataset.id;
+    BSTATE.open.has(id) ? BSTATE.open.delete(id) : BSTATE.open.add(id);
+    renderBudget();
+  }));
+  for (const r of rows) if (BSTATE.open.has(r.b.project_id)) drawBudgetDetail(r);
+}
+
+function budgetDetailHtml(r) {
+  const b = r.b, u = n => budgetAmt(n, b.unit);
+  const fig = (label, val) => `<div>${label}<br><strong>${val}</strong></div>`;
+  let figs;
+  if (b.monthly) {
+    const openM = DATA.meta.to.slice(0, 7);
+    const closed = monthsBetween(BSTATE.from.slice(0, 7), BSTATE.to.slice(0, 7))
+      .filter(m => m < openM && m >= DATA.meta.from.slice(0, 7) && m in (b.actuals || {}));
+    const overN = closed.filter(m => b.actuals[m] > b.budget).length;
+    figs = fig('Budget / month', u(b.budget)) + fig('Budget, time frame', u(r.budget))
+      + fig('Used, time frame', u(r.used)) + fig(r.remaining < 0 ? 'Over by' : 'Remaining', u(Math.abs(r.remaining)))
+      + fig('Closed months over', closed.length ? `${overN} of ${closed.length}` : '—');
+  } else {
+    figs = fig('Total budget', u(b.budget)) + fig('Used through ' + BSTATE.to, u(r.used))
+      + fig('Used in time frame', u(r.inRange)) + fig(r.remaining < 0 ? 'Over by' : 'Remaining', u(Math.abs(r.remaining)))
+      + (b.before ? fig(`Before ${DATA.meta.from}`, u(b.before)) : '');
+  }
+  return `<div class="figs">${figs}</div><div class="chart-wrap"><canvas id="bdChart${b.project_id}"></canvas></div>`;
+}
+
+// Month-by-month chart for one project. Months inside the time frame are
+// full color; the rest of the year is faded for context.
+function drawBudgetDetail(r) {
+  const b = r.b, actuals = b.actuals || {};
+  const openM = DATA.meta.to.slice(0, 7);
+  const months = monthsBetween(DATA.meta.from.slice(0, 7), openM);
+  const inFrame = m => m >= BSTATE.from.slice(0, 7) && m <= BSTATE.to.slice(0, 7);
+  const label = m => utcDate(m + '-01').toLocaleString('en-US', { month: 'short', timeZone: 'UTC' }) + (m === openM ? '*' : '');
+  const FADE = '#ddd8cc', unitLabel = b.unit === '$' ? 'Billable $' : 'Hours';
+  const val = m => +(actuals[m] || 0).toFixed(2);
+  let datasets;
+  if (b.monthly) {
+    const color = m => !inFrame(m) ? FADE : val(m) > b.budget ? '#B03030' : m === openM ? '#C8963C' : '#1f7a44';
+    datasets = [
+      { type: 'bar', label: 'Actual', data: months.map(val), backgroundColor: months.map(color), order: 2 },
+      { type: 'line', label: 'Monthly budget', data: months.map(() => b.budget), borderColor: '#0A2240', borderDash: [6, 4], pointRadius: 0, borderWidth: 2, order: 1 },
+    ];
+  } else {
+    let run = b.before || 0;
+    const cum = months.map(m => +(run += val(m)).toFixed(2));
+    datasets = [
+      { type: 'bar', label: 'Used that month', data: months.map(val), backgroundColor: months.map(m => inFrame(m) ? '#0A2240' : FADE), order: 3 },
+      { type: 'line', label: 'Used to date', data: cum, borderColor: '#C8963C', backgroundColor: '#C8963C', pointRadius: 3, borderWidth: 2, order: 2 },
+      { type: 'line', label: 'Total budget', data: months.map(() => b.budget), borderColor: '#B03030', borderDash: [6, 4], pointRadius: 0, borderWidth: 2, order: 1 },
+    ];
+  }
+  CHARTS['bd' + b.project_id] = new Chart(document.getElementById('bdChart' + b.project_id), {
+    data: { labels: months.map(label), datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      scales: { y: { beginAtZero: true, title: { display: true, text: unitLabel } } },
+      plugins: {
+        legend: { position: 'bottom' },
+        tooltip: { callbacks: { label: c => `${c.dataset.label}: ${budgetAmt(c.parsed.y, b.unit)}` } },
+        title: { display: true, text: '* current month, still in progress · faded months are outside the time frame', font: { size: 11, weight: 'normal' }, color: '#5b6470' },
+      },
+    },
+  });
+}
+
+function wireBudgetRange() {
+  const presets = budgetPresets();
+  const f = $('#budgetFrom'), t = $('#budgetTo'), host = $('#budgetPresets');
+  f.min = t.min = DATA.meta.from;
+  f.max = t.max = DATA.meta.year + '-12-31';
+  const apply = p => {
+    BSTATE.preset = p ? p.key : '';
+    if (p) { BSTATE.from = f.value = p.from; BSTATE.to = t.value = p.to; }
+    host.querySelectorAll('.chip').forEach(c => c.classList.toggle('on', c.dataset.key === BSTATE.preset));
+    renderBudget();
+  };
+  for (const p of presets) {
+    const el = document.createElement('span');
+    el.className = 'chip'; el.dataset.key = p.key; el.textContent = p.label;
+    el.addEventListener('click', () => apply(p));
+    host.appendChild(el);
+  }
+  f.addEventListener('change', () => { BSTATE.from = f.value; apply(null); });
+  t.addEventListener('change', () => { BSTATE.to = t.value; apply(null); });
+  apply(presets[0]);
 }
 
 // Budget vs. actual by month (By project tab). Monthly budgets compare each
@@ -1286,7 +1479,7 @@ $('#resetBtn').addEventListener('click', () => {
   renderAll();
 });
 
-renderBudget();
+wireBudgetRange();
 buildPeopleChips();
 buildProjectSelect();
 wireDates();
