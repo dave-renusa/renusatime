@@ -308,6 +308,9 @@ HTML_TEMPLATE = r"""<!doctype html>
   .pick-client { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin: 10px 0 2px; }
   .pick-panel label { display: flex; gap: 8px; align-items: flex-start; font-size: 13px; padding: 3px 0; cursor: pointer; }
   .pick-panel label small { color: var(--muted); }
+  button.chip { font: inherit; color: var(--navy); }
+  .chip .x { margin-left: 6px; color: var(--muted); font-weight: 700; }
+  .chip .x:hover { color: var(--red); }
   tr.btotal td { font-weight: 700; border-top: 2px solid var(--navy); background: #faf8f3; }
   nav.tabs { display: flex; gap: 4px; border-bottom: 2px solid var(--navy); margin-bottom: 18px; }
   nav.tabs button { background: transparent; border: 0; padding: 10px 18px; font: inherit; font-size: 14px; cursor: pointer; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -2px; letter-spacing: .3px; }
@@ -453,6 +456,13 @@ HTML_TEMPLATE = r"""<!doctype html>
             <div id="pickList"></div>
           </div>
         </details>
+      </div>
+      <div class="group">
+        <label class="head">Saved views</label>
+        <div class="chips">
+          <button class="chip" id="saveViewBtn" type="button">+ Save this view</button>
+          <span id="savedViews" class="chips"></span>
+        </div>
       </div>
       <div class="group">
         <label class="head">From</label>
@@ -1125,6 +1135,7 @@ function buildBudgetPicker() {
     $('#budgetPickSummary').textContent = ids.length ? name : 'All projects';
     renderBudget();
   };
+  buildBudgetPicker.sync = syncPicker;
   list.querySelectorAll('input').forEach(cb => cb.addEventListener('change', () => {
     const id = +cb.value;
     cb.checked ? BSTATE.sel.add(id) : BSTATE.sel.delete(id);
@@ -1163,6 +1174,49 @@ function wireBudgetRange() {
   f.addEventListener('change', () => { BSTATE.from = f.value; apply(null); });
   t.addEventListener('change', () => { BSTATE.to = t.value; apply(null); });
   apply(presets[0]);
+  buildSavedViews(v => {
+    const ids = new Set((DATA.budgets || []).map(b => b.project_id));
+    BSTATE.sel = new Set((v.sel || []).filter(id => ids.has(id)));
+    const p = presets.find(x => x.key === v.preset);
+    if (!p) { BSTATE.from = f.value = v.from; BSTATE.to = t.value = v.to; }
+    buildBudgetPicker.sync();
+    apply(p || null);
+  });
+}
+
+// Saved views: a named copy of the Budget tab's picks and time frame, kept in
+// this browser's localStorage. Loading one restores the picks and dates.
+const VIEWS_KEY = 'renusa-budget-views';
+function readViews() {
+  try { return JSON.parse(localStorage.getItem(VIEWS_KEY) || '[]'); } catch (e) { return []; }
+}
+function writeViews(views) {
+  try { localStorage.setItem(VIEWS_KEY, JSON.stringify(views)); } catch (e) { /* storage blocked: views just won't persist */ }
+}
+
+function buildSavedViews(load) {
+  const host = $('#savedViews');
+  const draw = () => {
+    const views = readViews();
+    host.innerHTML = views.map((v, i) =>
+      `<span class="chip" data-i="${i}" title="Load this view">${escapeHtml(v.name)}<span class="x" data-del="${i}" title="Delete this view">×</span></span>`
+    ).join('');
+    host.querySelectorAll('.chip').forEach(c => c.addEventListener('click', e => {
+      const i = +c.dataset.i, views = readViews();
+      if (e.target.dataset.del !== undefined) {
+        views.splice(i, 1); writeViews(views); draw(); return;
+      }
+      if (views[i]) load(views[i]);
+    }));
+  };
+  $('#saveViewBtn').addEventListener('click', () => {
+    const name = (window.prompt('Name this view (for example "Q4 solar sites"):') || '').trim();
+    if (!name) return;
+    const views = readViews().filter(v => v.name !== name);
+    views.push({ name, sel: [...BSTATE.sel], preset: BSTATE.preset, from: BSTATE.from, to: BSTATE.to });
+    writeViews(views); draw();
+  });
+  draw();
 }
 
 // Budget vs. actual by month (By project tab). Monthly budgets compare each
