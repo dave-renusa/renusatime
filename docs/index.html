@@ -31,6 +31,17 @@
   .chip { background: var(--cream); border: 1px solid var(--line); padding: 5px 11px; border-radius: 14px; font-size: 13px; cursor: pointer; user-select: none; }
   .chip.on { background: var(--navy); color: #fff; border-color: var(--navy); }
   .filters select, .filters input[type=date] { padding: 5px 8px; border: 1px solid var(--line); background: #fff; font: inherit; }
+  .pick { position: relative; }
+  .pick > summary { list-style: none; cursor: pointer; padding: 5px 10px; border: 1px solid var(--line); background: #fff; font-size: 14px; min-width: 200px; user-select: none; }
+  .pick > summary::-webkit-details-marker { display: none; }
+  .pick > summary::after { content: ' ▾'; color: var(--muted); }
+  .pick-panel { position: absolute; z-index: 20; top: calc(100% + 4px); left: 0; width: 340px; max-height: 380px; overflow-y: auto; background: #fff; border: 1px solid var(--line); box-shadow: 0 6px 18px rgba(10,34,64,.15); padding: 10px 12px; }
+  .pick-actions { display: flex; gap: 12px; font-size: 13px; margin-bottom: 4px; }
+  .pick-actions a { color: var(--navy); cursor: pointer; text-decoration: underline; }
+  .pick-client { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin: 10px 0 2px; }
+  .pick-panel label { display: flex; gap: 8px; align-items: flex-start; font-size: 13px; padding: 3px 0; cursor: pointer; }
+  .pick-panel label small { color: var(--muted); }
+  tr.btotal td { font-weight: 700; border-top: 2px solid var(--navy); background: #faf8f3; }
   nav.tabs { display: flex; gap: 4px; border-bottom: 2px solid var(--navy); margin-bottom: 18px; }
   nav.tabs button { background: transparent; border: 0; padding: 10px 18px; font: inherit; font-size: 14px; cursor: pointer; color: var(--muted); border-bottom: 3px solid transparent; margin-bottom: -2px; letter-spacing: .3px; }
   nav.tabs button.active { color: var(--navy); border-bottom-color: var(--gold); font-weight: 600; }
@@ -167,6 +178,16 @@
         <div class="chips" id="budgetPresets"></div>
       </div>
       <div class="group">
+        <label class="head">Projects</label>
+        <details class="pick" id="budgetPick">
+          <summary id="budgetPickSummary">All projects</summary>
+          <div class="pick-panel">
+            <div class="pick-actions"><a id="pickAll">Select all</a><a id="pickNone">Clear</a></div>
+            <div id="pickList"></div>
+          </div>
+        </details>
+      </div>
+      <div class="group">
         <label class="head">From</label>
         <input type="date" id="budgetFrom">
       </div>
@@ -178,7 +199,7 @@
     <div class="budget-summary" id="budgetSummary"></div>
     <div class="chart-card">
       <h2>Projects by % of budget used</h2>
-      <div class="budget-note">For everyone on the project, using the time frame above (the people, project and date filters at the top don't apply here). Monthly budgets are the monthly amount times the months covered, with partial months prorated by day and nothing counted before a project's first logged time. Total budgets show everything used from the project's start through the end date, plus how much of that landed in the time frame. Click a project for its month-by-month detail.</div>
+      <div class="budget-note">For everyone on the project, using the time frame above (the people, project and date filters at the top don't apply here). Monthly budgets are the monthly amount times the months covered, with partial months prorated by day and nothing counted before a project's first logged time. Total budgets show everything used from the project's start through the end date, plus how much of that landed in the time frame. Click a project for its month-by-month detail. Use Projects to pick the ones you want to compare; with two or more picked, a combined total sits at the bottom of the table (dollars and hours are totaled separately).</div>
       <div id="budgetTableHost"></div>
     </div>
   </section>
@@ -622,7 +643,7 @@ function renderProject(entries) {
 // Budget tab: Harvest budgets measured over a chosen time frame, for everyone
 // on the project. Independent of the filters at the top of the page.
 const BUDGET_WARN_PCT = 80;  // gold at or above this, red over 100
-const BSTATE = { from: '', to: '', preset: 'month', open: new Set() };
+const BSTATE = { from: '', to: '', preset: 'month', open: new Set(), sel: new Set() };  // sel: project_ids picked; empty = all
 
 const utcDate = s => new Date(s + 'T00:00:00Z');
 const isoDay = d => d.toISOString().slice(0, 10);
@@ -695,10 +716,11 @@ function renderBudget() {
     $('#budgetTableHost').innerHTML = `<div class="empty">Pick a From date on or before the To date.</div>`;
     return;
   }
-  const rows = (DATA.budgets || []).map(b => {
+  let rows = (DATA.budgets || []).map(b => {
     const r = budgetInRange(b, from, to);
     return { b, ...r, remaining: r.budget - r.used, pct: r.budget ? (r.used / r.budget) * 100 : 0 };
   });
+  if (BSTATE.sel.size) rows = rows.filter(r => BSTATE.sel.has(r.b.project_id));
   rows.sort((a, b) => b.pct - a.pct);
 
   const over = rows.filter(r => r.pct > 100).length;
@@ -721,8 +743,25 @@ function renderBudget() {
     </tr>`;
     return open ? row + `<tr class="bdetail"><td colspan="7">${budgetDetailHtml(r)}</td></tr>` : row;
   }).join('');
+  // Combined total for a picked selection. Dollars and hours can't be added
+  // together, so each unit gets its own total line.
+  let totals = '';
+  if (BSTATE.sel.size && rows.length > 1) {
+    totals = [...new Set(rows.map(r => r.b.unit))].map(u => {
+      const g = rows.filter(r => r.b.unit === u);
+      const bud = g.reduce((s, r) => s + r.budget, 0), used = g.reduce((s, r) => s + r.used, 0);
+      const rem = bud - used, pct = bud ? (used / bud) * 100 : 0, lv = budgetLevel(pct);
+      const label = `Combined, ${g.length} project${g.length === 1 ? '' : 's'}` + (u === '$' ? ' (dollars)' : ' (hours)');
+      return `<tr class="btotal"><td colspan="2">${label}</td>
+        <td class="num">${budgetAmt(bud, u)}</td>
+        <td class="num">${budgetAmt(used, u)}</td>
+        <td class="num${rem < 0 ? ' over' : ''}">${budgetAmt(rem, u)}</td>
+        <td><div class="bbar ${lv}"><span style="width:${Math.min(pct, 100)}%"></span></div></td>
+        <td class="num${lv === 'red' ? ' over' : ''}">${pct.toFixed(0)}%</td></tr>`;
+    }).join('');
+  }
   $('#budgetTableHost').innerHTML = rows.length
-    ? `<table><tr><th>Client</th><th>Project</th><th class="num">Budget</th><th class="num">Used</th><th class="num">Remaining</th><th></th><th class="num">% used</th></tr>${body}</table>`
+    ? `<table><tr><th>Client</th><th>Project</th><th class="num">Budget</th><th class="num">Used</th><th class="num">Remaining</th><th></th><th class="num">% used</th></tr>${body}${totals}</table>`
     : `<div class="empty">No project budgets found. Budgets are set per project in Harvest (Projects → Edit → Budget), and the token needs Administrator access to read them.</div>`;
 
   document.querySelectorAll('#budgetTableHost tr.brow').forEach(tr => tr.addEventListener('click', () => {
@@ -793,8 +832,52 @@ function drawBudgetDetail(r) {
   });
 }
 
+// Project picker for the Budget tab. Checking projects narrows the table to
+// those rows and adds a combined total. Nothing picked means all projects.
+function buildBudgetPicker() {
+  const byClient = new Map();
+  for (const b of DATA.budgets || []) {
+    const c = b.client || '';
+    if (!byClient.has(c)) byClient.set(c, []);
+    byClient.get(c).push(b);
+  }
+  const list = $('#pickList');
+  list.innerHTML = [...byClient.keys()].sort((a, b) => a.localeCompare(b)).map(c =>
+    `<div class="pick-client">${escapeHtml(c)}</div>` +
+    byClient.get(c).sort((a, b) => a.project.localeCompare(b.project)).map(b =>
+      `<label><input type="checkbox" value="${b.project_id}"><span>${escapeHtml(b.project)}
+        <small>${b.unit === '$' ? 'dollars' : 'hours'}${b.monthly ? ', monthly' : ''}</small></span></label>`
+    ).join('')
+  ).join('');
+  const syncPicker = () => {
+    list.querySelectorAll('input').forEach(cb => { cb.checked = BSTATE.sel.has(+cb.value); });
+    const ids = [...BSTATE.sel];
+    const name = ids.length === 1
+      ? ((DATA.budgets || []).find(b => b.project_id === ids[0]) || {}).project
+      : `${ids.length} projects selected`;
+    $('#budgetPickSummary').textContent = ids.length ? name : 'All projects';
+    renderBudget();
+  };
+  list.querySelectorAll('input').forEach(cb => cb.addEventListener('change', () => {
+    const id = +cb.value;
+    cb.checked ? BSTATE.sel.add(id) : BSTATE.sel.delete(id);
+    syncPicker();
+  }));
+  $('#pickAll').addEventListener('click', e => {
+    e.preventDefault();
+    BSTATE.sel = new Set((DATA.budgets || []).map(b => b.project_id));
+    syncPicker();
+  });
+  $('#pickNone').addEventListener('click', e => {
+    e.preventDefault();
+    BSTATE.sel = new Set();
+    syncPicker();
+  });
+}
+
 function wireBudgetRange() {
   const presets = budgetPresets();
+  buildBudgetPicker();
   const f = $('#budgetFrom'), t = $('#budgetTo'), host = $('#budgetPresets');
   f.min = t.min = DATA.meta.from;
   f.max = t.max = DATA.meta.year + '-12-31';
